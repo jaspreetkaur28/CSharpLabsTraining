@@ -32,4 +32,10 @@ open it up
 
 10. git commit -m "Initial Commit"
 
-11 git push (log in to GitHub popup) 
+11 git push (log in to GitHub popup) 4
+
+Daily Use
+
+cd c: 
+cd FolderName starting letter +tab tab - auto fill 
+REPEAT 8 to 11 to push. 
