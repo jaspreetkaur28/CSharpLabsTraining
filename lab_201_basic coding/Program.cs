@@ -29,8 +29,8 @@ namespace lab_201_basic_coding
            
             object w = e.AddMinutes(1);
 
-            int ww = (DateTime)w;
-            Console.WriteLine(ww); // adds 1 to them all
+          //  int ww = (DateTime)w;
+          //  Console.WriteLine(ww); // adds 1 to them all
 
             //BOXING
 
@@ -61,8 +61,13 @@ namespace lab_201_basic_coding
             Console.WriteLine(m % 8);
 
 
+            //Math equations 
+            //    Math.Pow(var, power number e.g 2 for square)
+            // Math.Round(var, number of decimal places e.g 4)
+            
 
-
+            // for ( starting value, range, increment/decrement) {}
+            // e.g for (int i = 1; i< 100 ; i++ or i--)
 
 
         }

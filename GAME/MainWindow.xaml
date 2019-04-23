@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GAME"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="650" Width="1000">
     <Grid Margin="0,0,-0.4,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width ="*"/>
@@ -18,13 +18,14 @@
             <RowDefinition Height ="*"/>
             <RowDefinition Height ="*"/>
             <RowDefinition Height ="*"/>
+            <RowDefinition Height ="*"/>
         </Grid.RowDefinitions>
 
         <Button x:Name="Start" Grid.Row="1" Grid.Column ="0" Background="#4286f4" Click="Start_Click" />
         <Button x:Name="Label" Grid.Row="2 " Grid.Column ="0" Background="#5292f9" />
-        <Button x:Name="Retry" Grid.Row="3 " Grid.Column ="0" Background="#4286f4" />
+        <Button x:Name="Retry" Grid.Row="3 " Grid.Column ="0" Background="#4286f4" Click="Retry_Click" />
 
-        <Button x:Name="Button1" Grid.Row="1 " Grid.Column ="1" Background="#96c4ff" />
+        <Button x:Name="Button1" Grid.Row="1 " Grid.Column ="1" Background="#96c4ff" Click="Button1_Click" />
         <Button x:Name="Button2" Grid.Row="1 " Grid.Column ="2" Background="#96c4ff" />
         <Button x:Name="Button3" Grid.Row="1 " Grid.Column ="3" Background="#96c4ff" />
        

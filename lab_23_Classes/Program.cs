@@ -34,6 +34,7 @@ namespace lab_23_Classes
             public string Name;
             public int Age;
             public double Height; //double as it may have a remainder
+           // private bool _isEnabled; // normally private often with _prefix and lowercase first letter
 
             // Method/ Function
             public void Grow()
