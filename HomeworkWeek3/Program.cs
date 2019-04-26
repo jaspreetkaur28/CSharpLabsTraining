@@ -17,6 +17,45 @@ namespace HomeworkWeek3
 
         static void Main(string[] args)
         {
+
+             
+                //Create a list with 5 items 
+                //then iterate over the list :  multiple each item by 2: Add to a Stack!
+                //then iterate over the stack: add 10 over each number: add to queue!
+                //Iterate over queue: return total
+                list01.Add(1);
+                list01.Add(1);
+                list01.Add(1);
+                list01.Add(1);
+                list01.Add(1);
+
+                foreach (int L in list01)
+                {
+                    stack01.Push(L * 2);
+                
+                }
+                foreach (int S in stack01)
+                {
+                  queue01.Enqueue(S+10);
+                }
+            int sum = queue01.Sum();
+
+            Console.WriteLine(sum);
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+            /*
             Console.WriteLine("list");
 //INT
             list01.Add(1);
@@ -65,10 +104,10 @@ namespace HomeworkWeek3
             {
                 Console.WriteLine(item);
             }
-
+         */
 
         }
-
+        
     }
 
 

@@ -30,6 +30,13 @@ namespace lab_35_constructors
         }
         //defult contructor does not exist
         public Parent(){} 
+
+        //Or
+        /*
+        Class Parent
+        {
+            public Parent();
+        }*/
     }
     class Child : Parent
     {

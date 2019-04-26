@@ -23,7 +23,7 @@
 
         <Button x:Name="Start" Grid.Row="1" Grid.Column ="0" Background="#4286f4" Click="Start_Click" />
         <Button x:Name="Label" Grid.Row="2 " Grid.Column ="0" Background="#5292f9" />
-        <Button x:Name="Retry" Grid.Row="3 " Grid.Column ="0" Background="#4286f4" Click="Retry_Click" />
+        <Button x:Name="Retry" Grid.Row="3 " Grid.Column ="0" Background="#4286f4"  />
 
         <Button x:Name="Button1" Grid.Row="1 " Grid.Column ="1" Background="#96c4ff" Click="Button1_Click" />
         <Button x:Name="Button2" Grid.Row="1 " Grid.Column ="2" Background="#96c4ff" />

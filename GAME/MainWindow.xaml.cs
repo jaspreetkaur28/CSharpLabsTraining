@@ -15,20 +15,17 @@ using System.Windows.Shapes;
 
 namespace GAME
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
-    { 
+    { /*
         Random Rnd = new Random();  
         int i = 0;
         int speed = 5; 
         bool gameOver = false;
-
+        */
         public MainWindow()
         {
             InitializeComponent();
-            resetGame();
+           // resetGame();
 
 
             Title.Content = "Sequence";
@@ -41,16 +38,7 @@ namespace GAME
              
 
         }
-
-
-        private void playGame (object sender,EventArgs e)
-        {
-
-        }
-        public void resetGame()
-        {
-
-        }
+        
 
         private void Start_Click(object sender, RoutedEventArgs e)
         {
@@ -111,18 +99,14 @@ namespace GAME
 
             */
 
-            //CHANGE - needs to do the ubttons one by one - check th echosenButton
-
+        //CHANGE - needs to do the ubttons one by one - check th echosenButton
+    
         }
-
-        private void Retry_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
+ 
 
         private void Button1_Click(object sender, RoutedEventArgs e)
         { 
-            Image img = new Image();
+           /* Image img = new Image();
             img.Source = new BitmapImage(new Uri("foo.png"));
 
             StackPanel stackPnl = new StackPanel();
@@ -132,6 +116,7 @@ namespace GAME
 
             Button btn = new Button();
             btn.Content = stackPnl;
+            */
         }
 
        

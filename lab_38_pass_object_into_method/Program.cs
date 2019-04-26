@@ -23,13 +23,7 @@ namespace lab_38_pass_object_into_method
             animal.Age++;
             animal.Weight += 20;
         }
-
-
-
-
     }
-
-
 
     class Animal
     {

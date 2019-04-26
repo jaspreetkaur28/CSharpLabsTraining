@@ -15,9 +15,9 @@ namespace lab_22_Classes
 
         class Car
         {
-            public string Model; // for a public field use caps on
-            public string Color;
-            public int Length;
+            //public string Model; // for a public field use caps on
+          //  public string Color;
+          //  public int Length;
 
         }
 
