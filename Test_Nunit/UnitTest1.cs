@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using lab_42_testme;
 using lab_102_homework;
+using Homework_9_NUNIT;
 
 namespace Tests
 {
@@ -56,5 +57,7 @@ namespace Tests
           // assert 
           Assert.AreEqual(expected, actual);
         }
+   
+
     }
 }

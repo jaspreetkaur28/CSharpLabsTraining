@@ -18,7 +18,7 @@
             <RowDefinition Height ="*"/>
         </Grid.RowDefinitions>
 
-        <Button x:Name="Button01" Grid.Row="1 " Grid.Column ="1" Background="#1848f7" Click="Button01_Click" Margin="0.4,0.2,0,168.6" Grid.RowSpan="2"/>
+        <Button x:Name="Button01" Grid.Row="1 " Grid.Column ="1" Background="#1848f7" Click="Button01_Click" />
         <Label x:Name="Label01" Grid.Row="0 " Grid.Column ="1" Background="#96c4ff"/>
         <ListBox x:Name="ListBox01" Grid.Row="0" Grid.Column ="0" Grid.RowSpan="2" Background="#e5eafc" />
 

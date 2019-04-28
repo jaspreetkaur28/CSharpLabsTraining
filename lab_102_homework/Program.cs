@@ -28,7 +28,6 @@ namespace lab_102_homework
             List<int> list01 = new List<int>();
             Stack<int> stack01 = new Stack<int>();
             Queue<int> queue01 = new Queue<int>();
-
             
             list01.Add(a);
             list01.Add(b);
