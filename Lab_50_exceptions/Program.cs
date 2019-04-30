@@ -34,7 +34,7 @@ namespace Lab_50_exceptions
                 Console.WriteLine(ed.Message); //Nice message
                 System.IO.File.WriteAllText("Error Log", "major mulfunction" + DateTime.Now);// tells us there is a error
             }
-            catch (Exception e) 
+            catch (Exception e) //general all exceptions
             {
                 Console.WriteLine("Oops! Snap! Something went wrong!");
                 Console.WriteLine(e);

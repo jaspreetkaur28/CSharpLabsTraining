@@ -12,20 +12,22 @@ namespace Homework_8_Arrays
         static void Main(string[] args)
         {
  
-           string[] array01 = new string[5] { "hello", "there", "how", "are", "you" };
+           string[] array01 = new string[5] { "hii", "there", "how", "are", "you" };
 
             foreach (string item in array01)
             {
                 Console.WriteLine(item);
             }
-            string[] array02 = new string[5] { "Bye", "there", "how", "are", "you" };
-
+            var array02 = array01;
+            array02[1] = "No";
             foreach (string item in array02)
             {
                 Console.WriteLine(item);
             }
-
-
+            foreach (string item in array01)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }

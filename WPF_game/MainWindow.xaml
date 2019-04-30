@@ -6,40 +6,48 @@
         xmlns:local="clr-namespace:WPF_game"
         mc:Ignorable="d"
         Title="MainWindow" Height="650" Width="1000">
-    <Grid Margin="0,0,-0.4,0">
+    <Grid >
+        
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width ="*"/>
+            <ColumnDefinition Width ="*"/>
             <ColumnDefinition Width ="*"/>
             <ColumnDefinition Width ="*"/>
             <ColumnDefinition Width ="*"/>
             <ColumnDefinition Width ="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height ="124*"/>
-            <RowDefinition Height ="19*"/>
-            <RowDefinition Height="105*"/>
-            <RowDefinition Height ="124*"/>
-            <RowDefinition Height ="124*"/>
-            <RowDefinition Height ="124*"/>
+            <RowDefinition Height ="*"/>
+            <RowDefinition Height ="*"/>
+            <RowDefinition Height ="*"/>
+            <RowDefinition Height ="*"/>
+            <RowDefinition Height ="*"/>
         </Grid.RowDefinitions>
 
-        <Button x:Name="Start" Grid.Row="1" Grid.Column ="0" Background="#4286f4" Grid.RowSpan="2"  Click="Start_Click" />
-        <Button x:Name="Label" Grid.Row="3" Grid.Column ="0" Background="#5292f9" />
-        <Button x:Name="Retry" Grid.Row="4" Grid.Column ="0" Background="#4286f4"  />
+        <Button x:Name="Start" Grid.Row="1" Grid.Column ="0" Background="#4286f4" Click="Start_Click" />
+        <Button x:Name="Label" Grid.Row="2 " Grid.Column ="0" Background="#5292f9" />
+        <Button x:Name="Retry" Grid.Row="3 " Grid.Column ="0" Background="#4286f4"  Click="Retry_Click"/>
 
-        <Button x:Name="Button1" Grid.Row="1 " Grid.Column ="1" Background="#96c4ff" Grid.ColumnSpan="2" Margin="0,0,247.8,0" Grid.RowSpan="2"  />
-        <Button x:Name="Button2" Grid.Row="1 " Grid.Column ="2" Background="#96c4ff" Grid.ColumnSpan="2" Margin="0.2,0,248.6,0" Grid.RowSpan="2" />
-        <Button x:Name="Button3" Grid.Row="1 " Grid.Column ="3" Background="#96c4ff" Margin="0.2,0,-0.4,0" Grid.RowSpan="2" />
+        <Button x:Name="Button01" Grid.Row="1 " Grid.Column ="1" Background="#96c4ff" Click="button_Click"/>
+        <Button x:Name="Button02" Grid.Row="1 " Grid.Column ="2" Background="#96c4ff" Click="button_Click"/>
+        <Button x:Name="Button03" Grid.Row="1 " Grid.Column ="3" Background="#96c4ff" Click="button_Click"/>
+        <Button x:Name="Button04" Grid.Row="1 " Grid.Column ="4" Background="#96c4ff" Click="button_Click"/>
+        <Button x:Name="Button05" Grid.Row="1 " Grid.Column ="5" Background="#96c4ff" Click="button_Click"/>
 
-        <Button x:Name="Button4" Grid.Row="3" Grid.Column ="1" Background="#96c4ff" Grid.ColumnSpan="2" Margin="0,0,247.8,0" />
-        <Button x:Name="Button5" Grid.Row="3" Grid.Column ="2" Background="#96c4ff" Grid.ColumnSpan="2" Margin="0.2,0,248.6,0" />
-        <Button x:Name="Button6" Grid.Row="3" Grid.Column ="3" Background="#96c4ff" Margin="0.2,0,-0.4,0" />
+        <Button x:Name="Button06" Grid.Row="2" Grid.Column ="1" Background="#96c4ff" Click="button_Click"/>
+        <Button x:Name="Button07" Grid.Row="2" Grid.Column ="2" Background="#96c4ff" Click="button_Click"/>
+        <Button x:Name="Button08" Grid.Row="2" Grid.Column ="3" Background="#96c4ff" Click="button_Click"/>
+        <Button x:Name="Button09" Grid.Row="2" Grid.Column ="4" Background="#96c4ff" Click="button_Click"/>
+        <Button x:Name="Button10" Grid.Row="2" Grid.Column ="5" Background="#96c4ff" Click="button_Click"/>
 
-        <Button x:Name="Button7" Grid.Row="4" Grid.Column ="1" Background="#96c4ff" Grid.ColumnSpan="2" Margin="0,0,247.8,0" />
-        <Button x:Name="Button8" Grid.Row="4" Grid.Column ="2" Background="#96c4ff" Grid.ColumnSpan="2" Margin="0.2,0,248.6,0" />
-        <Button x:Name="Button9" Grid.Row="4" Grid.Column ="3" Background="#96c4ff" Margin="0.2,0,-0.4,0" />
+        <Button x:Name="Button11" Grid.Row="3" Grid.Column ="1" Background="#96c4ff" Click="button_Click"/>
+        <Button x:Name="Button12" Grid.Row="3 " Grid.Column ="2" Background="#96c4ff" Click="button_Click"/>
+        <Button x:Name="Button13" Grid.Row="3 " Grid.Column ="3" Background="#96c4ff" Click="button_Click"/>
+        <Button x:Name="Button14" Grid.Row="3 " Grid.Column ="4" Background="#96c4ff" Click="button_Click"/>
+        <Button x:Name="Button15" Grid.Row="3 " Grid.Column ="5" Background="#96c4ff" Click="button_Click"/>
 
-        <Label x:Name="Title" Grid.Row="0 " Grid.Column ="1" Grid.ColumnSpan="2" Margin="0,0,247.8,0" />
+        <Label x:Name="Title" Grid.Row="0" Grid.Column ="1" Grid.ColumnSpan="4"/>
 
-
+        <Label Name="lblTime" FontSize="22" HorizontalAlignment="Center" VerticalAlignment="Center" />
     </Grid>
 </Window>
