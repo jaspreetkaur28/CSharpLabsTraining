@@ -20,16 +20,14 @@ namespace WPF_game
 {
     public partial class MainWindow : Window
     {
-        delegate void MyDelegate(); 
-        static event MyDelegate myEvent;
-
-        private int time = 6;
+        private int time = 5;
         private DispatcherTimer Timer;
 
-        private Button lastButton = null;
 
         static Button[] ButtonRange;
-       
+        static Random rnd = new Random();
+        static List<Button> randomButtons = new List<Button>();
+
         //add gameover function where it says you failed in a messagebox  plus show what was the chosenbutton and change the wrong button to red
         //and opens a new window when they click restart on the messagebox? 
         public MainWindow()
@@ -44,12 +42,12 @@ namespace WPF_game
             Retry.Content = "Reset";
             Retry.FontSize = 20;
             #endregion
-
+          
         }
 
         private void Start_Click(object sender, RoutedEventArgs e)
         {
-           
+            Start.IsEnabled = false;
             Timer = new DispatcherTimer();
             Timer.Interval = new TimeSpan(0, 0, 1);
             Timer.Tick += Timer_Tick;
@@ -80,8 +78,7 @@ namespace WPF_game
         }
         private void resetbuttons()
         {
-            Button[] ButtonRange = new Button[15] { Button01, Button02, Button03, Button04, Button05, Button06, Button07, Button08, Button09, Button10, Button11, Button12, Button13, Button14, Button15 };
-            var bc = new BrushConverter();
+          var bc = new BrushConverter();
             foreach (var item in ButtonRange)
             {
                 item.Background = (Brush)bc.ConvertFrom("#96c4ff");
@@ -94,14 +91,9 @@ namespace WPF_game
         { 
            int x = 1;
            Label.Content = $"Round {x}";
+            ButtonRange = new Button[15]
+        { Button01, Button02, Button03, Button04, Button05, Button06, Button07, Button08, Button09, Button10, Button11, Button12, Button13, Button14, Button15 };
 
-
-          ButtonRange = new Button[15]
-         { Button01, Button02, Button03, Button04, Button05, Button06, Button07, Button08, Button09, Button10, Button11, Button12, Button13, Button14, Button15 };
-
-
-            Random rnd = new Random();
-           List<Button> randomButtons = new List<Button>();
 
             for (int i = 0; i < 5; ++i)
             {
@@ -121,48 +113,105 @@ namespace WPF_game
 
 
         private void button_Click(object sender, EventArgs e)
-        {
-            // Change the background color of the button that was clicked
-            Button current = (Button)sender;
-            current.Background = Brushes.Blue;
-            MessageBox.Show(current.Name);
+        { 
+            Button current = (Button)sender;   
 
-            double x;
-            double.TryParse(current.Name, out x);
-            MessageBox.Show(x.ToString());
-           
-           
+            #region if current button is one of the chosen
 
-            // Revert the background color of the previously-colored button, if any
-            if (lastButton != null)
-                current.Background = Brushes.Red;
+            if (ButtonRange[0].Name == current.Name)
+            { if (randomButtons.Contains(Button01)) { current.Background = Brushes.Blue; }
+                else { current.Background = Brushes.Red; MessageBox.Show("Game Over"); }
+            }
 
-            // Update the previously-colored button
-            lastButton = current;
+            else if (ButtonRange[1].Name == current.Name)
+            { if (randomButtons.Contains(Button02)) { current.Background = Brushes.Blue; }
+                else { current.Background = Brushes.Red; MessageBox.Show("Game Over"); }
+            }
 
+            else if (ButtonRange[2].Name == current.Name)
+            { if (randomButtons.Contains(Button03)) { current.Background = Brushes.Blue; }
+                else { current.Background = Brushes.Red; MessageBox.Show("Game Over"); }
+            }
+
+            else if (ButtonRange[3].Name == current.Name)
+            { if (randomButtons.Contains(Button04)) { current.Background = Brushes.Blue; }
+                else { current.Background = Brushes.Red; MessageBox.Show("Game Over"); }
+            }
+
+            else if (ButtonRange[4].Name == current.Name)
+            { if (randomButtons.Contains(Button05)) { current.Background = Brushes.Blue; }
+                else { current.Background = Brushes.Red; MessageBox.Show("Game Over"); }
+            }
+
+            else if (ButtonRange[5].Name == current.Name)
+            { if (randomButtons.Contains(Button06)) { current.Background = Brushes.Blue; }
+                else { current.Background = Brushes.Red; MessageBox.Show("Game Over"); }
+            }
+
+            else if (ButtonRange[6].Name == current.Name)
+            { if (randomButtons.Contains(Button07)) { current.Background = Brushes.Blue; }
+                else { current.Background = Brushes.Red; MessageBox.Show("Game Over"); }
+            }
+
+            else if (ButtonRange[7].Name == current.Name)
+            {  if (randomButtons.Contains(Button08)) { current.Background = Brushes.Blue; }
+                else { current.Background = Brushes.Red; MessageBox.Show("Game Over"); }
+            }
+
+            else if (ButtonRange[8].Name == current.Name)
+            { if (randomButtons.Contains(Button09)) { current.Background = Brushes.Blue; }
+                else { current.Background = Brushes.Red; MessageBox.Show("Game Over"); }
+            }
+
+            else if (ButtonRange[9].Name == current.Name)
+            { if (randomButtons.Contains(Button10)) { current.Background = Brushes.Blue; }
+                else { current.Background = Brushes.Red; MessageBox.Show("Game Over"); }
+            }
+
+            else if (ButtonRange[10].Name == current.Name)
+            { if (randomButtons.Contains(Button11)) { current.Background = Brushes.Blue; }
+                else { current.Background = Brushes.Red; MessageBox.Show("Game Over"); }
+            }
+
+            else if (ButtonRange[11].Name == current.Name)
+            { if (randomButtons.Contains(Button12)) { current.Background = Brushes.Blue; }
+                else { current.Background = Brushes.Red; MessageBox.Show("Game Over"); }
+            }
+
+            else if (ButtonRange[12].Name == current.Name)
+            { if (randomButtons.Contains(Button13)) { current.Background = Brushes.Blue; }
+                else { current.Background = Brushes.Red; MessageBox.Show("Game Over"); }
+            }
+
+            else if (ButtonRange[13].Name == current.Name)
+            { if (randomButtons.Contains(Button14)) { current.Background = Brushes.Blue; }
+                else { current.Background = Brushes.Red; MessageBox.Show("Game Over"); } }
+
+            else if (ButtonRange[14].Name == current.Name)
+            { if (randomButtons.Contains(Button15)) { current.Background = Brushes.Blue; }
+                else   { current.Background = Brushes.Red; MessageBox.Show("Game Over"); }
+            }
+            
+             #endregion
+             else {  foreach (Button button in randomButtons) { button.Background = Brushes.Gray; }
+                  MessageBox.Show("Game Over");
+                     
+                  MessageBoxResult result = MessageBox.Show("Sorry that wasn't the right one. Do you want to play again?",
+                                        "Game Over",
+                                        MessageBoxButton.YesNo,
+                                        MessageBoxImage.Question);
+                if (result == MessageBoxResult.Yes)
+                {
+                    
+                }
+                else Application.Current.Shutdown();
+
+            }
+
+      */
 
 
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
