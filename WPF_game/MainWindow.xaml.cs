@@ -27,6 +27,7 @@ namespace WPF_game
         static Button[] ButtonRange;
         static Random rnd = new Random();
         static List<Button> randomButtons = new List<Button>();
+        static List<Button> UserPickedButtons = new List<Button>();
 
         //add gameover function where it says you failed in a messagebox  plus show what was the chosenbutton and change the wrong button to red
         //and opens a new window when they click restart on the messagebox? 
@@ -110,116 +111,118 @@ namespace WPF_game
         
         }
         //  foreach button clicked which != randomButtons - game over else change buttonBackGround = Brushes.Gray
+        private void GameOver()
+        {
+
+            foreach (Button button in randomButtons) { button.Background = Brushes.Gray; }
+            
+
+            MessageBoxResult result = MessageBox.Show("Sorry that wasn't the right one. Do you want to play again?",
+                                  "Game Over",
+                                  MessageBoxButton.YesNo,
+                                  MessageBoxImage.Question);
+
+            if (result == MessageBoxResult.Yes)
+            {
+                MainWindow WPF = new MainWindow();
+                WPF.ShowDialog();
+            }
+            else Application.Current.Shutdown();
+        }
 
 
         private void button_Click(object sender, EventArgs e)
         { 
-            Button current = (Button)sender;   
+            Button current = (Button)sender;
 
             #region if current button is one of the chosen
 
             if (ButtonRange[0].Name == current.Name)
-            { if (randomButtons.Contains(Button01)) { current.Background = Brushes.Blue; }
-                else { current.Background = Brushes.Red; MessageBox.Show("Game Over"); }
+            {
+                if (randomButtons.Contains(Button01)) { current.Background = Brushes.Blue; UserPickedButtons.Add(current); }
+                else GameOver();
             }
-
-            else if (ButtonRange[1].Name == current.Name)
-            { if (randomButtons.Contains(Button02)) { current.Background = Brushes.Blue; }
-                else { current.Background = Brushes.Red; MessageBox.Show("Game Over"); }
+            else if (ButtonRange[1].Name == current.Name )
+            {
+                if (randomButtons.Contains(Button02)) { current.Background = Brushes.Blue; UserPickedButtons.Add(current); }
+                else GameOver();
             }
-
             else if (ButtonRange[2].Name == current.Name)
-            { if (randomButtons.Contains(Button03)) { current.Background = Brushes.Blue; }
-                else { current.Background = Brushes.Red; MessageBox.Show("Game Over"); }
+            {
+                if (randomButtons.Contains(Button03)) { current.Background = Brushes.Blue; UserPickedButtons.Add(current); }
+                else GameOver();
             }
-
             else if (ButtonRange[3].Name == current.Name)
-            { if (randomButtons.Contains(Button04)) { current.Background = Brushes.Blue; }
-                else { current.Background = Brushes.Red; MessageBox.Show("Game Over"); }
+            {
+                if (randomButtons.Contains(Button04)) { current.Background = Brushes.Blue; UserPickedButtons.Add(current); }
+                else GameOver();
             }
-
             else if (ButtonRange[4].Name == current.Name)
-            { if (randomButtons.Contains(Button05)) { current.Background = Brushes.Blue; }
-                else { current.Background = Brushes.Red; MessageBox.Show("Game Over"); }
+            {
+                if (randomButtons.Contains(Button05)) { current.Background = Brushes.Blue; UserPickedButtons.Add(current); }
+                else GameOver();
             }
-
             else if (ButtonRange[5].Name == current.Name)
-            { if (randomButtons.Contains(Button06)) { current.Background = Brushes.Blue; }
-                else { current.Background = Brushes.Red; MessageBox.Show("Game Over"); }
+            {
+                if (randomButtons.Contains(Button06)) { current.Background = Brushes.Blue; UserPickedButtons.Add(current); }
+                else GameOver();
             }
-
             else if (ButtonRange[6].Name == current.Name)
-            { if (randomButtons.Contains(Button07)) { current.Background = Brushes.Blue; }
-                else { current.Background = Brushes.Red; MessageBox.Show("Game Over"); }
+            {
+                if (randomButtons.Contains(Button07)) { current.Background = Brushes.Blue; UserPickedButtons.Add(current); }
+                else GameOver();
             }
-
-            else if (ButtonRange[7].Name == current.Name)
-            {  if (randomButtons.Contains(Button08)) { current.Background = Brushes.Blue; }
-                else { current.Background = Brushes.Red; MessageBox.Show("Game Over"); }
-            }
-
             else if (ButtonRange[8].Name == current.Name)
-            { if (randomButtons.Contains(Button09)) { current.Background = Brushes.Blue; }
-                else { current.Background = Brushes.Red; MessageBox.Show("Game Over"); }
+            {
+                if (randomButtons.Contains(Button09)) { current.Background = Brushes.Blue; UserPickedButtons.Add(current); }
+                else GameOver();
             }
-
             else if (ButtonRange[9].Name == current.Name)
-            { if (randomButtons.Contains(Button10)) { current.Background = Brushes.Blue; }
-                else { current.Background = Brushes.Red; MessageBox.Show("Game Over"); }
+            {
+                if (randomButtons.Contains(Button10)) { current.Background = Brushes.Blue; UserPickedButtons.Add(current); }
+                else GameOver();
             }
-
             else if (ButtonRange[10].Name == current.Name)
-            { if (randomButtons.Contains(Button11)) { current.Background = Brushes.Blue; }
-                else { current.Background = Brushes.Red; MessageBox.Show("Game Over"); }
+            {
+                if (randomButtons.Contains(Button11)) { current.Background = Brushes.Blue; UserPickedButtons.Add(current); }
+                else GameOver();
             }
-
             else if (ButtonRange[11].Name == current.Name)
-            { if (randomButtons.Contains(Button12)) { current.Background = Brushes.Blue; }
-                else { current.Background = Brushes.Red; MessageBox.Show("Game Over"); }
+            {
+                if (randomButtons.Contains(Button12)) { current.Background = Brushes.Blue; UserPickedButtons.Add(current); }
+                else GameOver();
             }
-
             else if (ButtonRange[12].Name == current.Name)
-            { if (randomButtons.Contains(Button13)) { current.Background = Brushes.Blue; }
-                else { current.Background = Brushes.Red; MessageBox.Show("Game Over"); }
+            {
+                if (randomButtons.Contains(Button13)) { current.Background = Brushes.Blue; UserPickedButtons.Add(current); }
+                else GameOver();
             }
-
             else if (ButtonRange[13].Name == current.Name)
-            { if (randomButtons.Contains(Button14)) { current.Background = Brushes.Blue; }
-                else { current.Background = Brushes.Red; MessageBox.Show("Game Over"); } }
-
+            {
+                if (randomButtons.Contains(Button14)) { current.Background = Brushes.Blue; UserPickedButtons.Add(current); }
+                else GameOver();
+            }
             else if (ButtonRange[14].Name == current.Name)
-            { if (randomButtons.Contains(Button15)) { current.Background = Brushes.Blue; }
-                else   { current.Background = Brushes.Red; MessageBox.Show("Game Over"); }
-            }
-            
-             #endregion
-             else {  foreach (Button button in randomButtons) { button.Background = Brushes.Gray; }
-                  MessageBox.Show("Game Over");
-                     
-                  MessageBoxResult result = MessageBox.Show("Sorry that wasn't the right one. Do you want to play again?",
-                                        "Game Over",
-                                        MessageBoxButton.YesNo,
-                                        MessageBoxImage.Question);
-                if (result == MessageBoxResult.Yes)
-                {
-                    
-                }
-                else Application.Current.Shutdown();
+            {
+                if (randomButtons.Contains(Button15)) { current.Background = Brushes.Blue; UserPickedButtons.Add(current); }
+                else GameOver();
+            } 
 
+            /*
+        MessageBox.Show(UserPickedButtons.Count);
+            #endregion
+            if (UserPickedButtons.Length =5)
+            {
+                MessageBox.Show("Yes");
+            }
             }
 
-      */
-
-
-        }
-
+            */
+        
 
 
 
-
-
-
-
+            /*
         private void UserAnswer(object sender , RoutedEventHandler e)
         {
 

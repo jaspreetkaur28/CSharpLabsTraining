@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\homework_10_Nunit\homework_10_Nunit.csproj" />
     <ProjectReference Include="..\Homework_9_NUNIT\Homework_9_NUNIT.csproj" />
     <ProjectReference Include="..\lab_102_homework\lab102_homework.csproj" />
     <ProjectReference Include="..\lab_42_testme\lab_42_testme.csproj" />

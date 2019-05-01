@@ -151,6 +151,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_55_revision", "lab_55_r
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_56_events", "lab_56_events\lab_56_events.csproj", "{3A488DA4-7A59-4CDA-8BBF-64E743B39A81}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "homework_10_Nunit", "homework_10_Nunit\homework_10_Nunit.csproj", "{44FB1651-5F52-4CEC-9E48-91837903378C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -453,6 +455,10 @@ Global
 		{3A488DA4-7A59-4CDA-8BBF-64E743B39A81}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A488DA4-7A59-4CDA-8BBF-64E743B39A81}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A488DA4-7A59-4CDA-8BBF-64E743B39A81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44FB1651-5F52-4CEC-9E48-91837903378C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44FB1651-5F52-4CEC-9E48-91837903378C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44FB1651-5F52-4CEC-9E48-91837903378C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44FB1651-5F52-4CEC-9E48-91837903378C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
