@@ -20,20 +20,23 @@ namespace WPF_game
 {
     public partial class MainWindow : Window
     {
-        private int time = 4;
+        private int time = 6;
         private DispatcherTimer Timer;
-
+        private bool IsDisplaying; // maybe called a flag
 
         static Button[] ButtonRange;
         static Random rnd = new Random();
         static List<Button> randomButtons = new List<Button>();
         static List<Button> UserPickedButtons = new List<Button>();
         static int x = 1;
+
+
         //add gameover function where it says you failed in a messagebox  plus show what was the chosenbutton and change the wrong button to red
         //and opens a new window when they click restart on the messagebox? 
         public MainWindow()
         {
             InitializeComponent();
+            IsDisplaying = true;
             #region title semantics
             Title.Content = "      Pattern Matching";
             Title.FontSize = 50;
@@ -48,30 +51,34 @@ namespace WPF_game
 
         private void Start_Click(object sender, RoutedEventArgs e) 
         {
-
-            Count.Content = $"Random {randomButtons.Count}. User Clicked {UserPickedButtons.Count}";
+          //  Count.Content = $"Random {randomButtons.Count}. User Clicked {UserPickedButtons.Count}";
             UserPickedButtons.Clear();
             randomButtons.Clear();
             Start.IsEnabled = false;
+
             Timer = new DispatcherTimer();
             Timer.Interval = new TimeSpan(0, 0, 1);
             Timer.Tick += Timer_Tick;
             Timer.Start();
             Label.Content = $"Round {x}";
             RandomTiles();
+            
         }
         void Timer_Tick(object sender, EventArgs e)
         {
-            if (time > 2)
+            if (time > 4)
             {
                 time--;
-              //  lblTime.Content = DateTime.Now.ToLongTimeString();
+                //  lblTime.Content = DateTime.Now.ToLongTimeString();
+
+                IsDisplaying = true;
             }
             else
             {
                 Timer.Stop();
-
                 resetbuttons();
+
+                IsDisplaying = false;
             }
         }
         private void Retry_Click(object sender, RoutedEventArgs e)
@@ -84,7 +91,7 @@ namespace WPF_game
 
             resetbuttons();
 
-            Timer.Stop();
+         
             
         }
         private void resetbuttons()
@@ -104,7 +111,7 @@ namespace WPF_game
 
             if (x <= 3)
             {
-                 for (int i = 0; i < 3; ++i)
+                 for (int i = 0; i < 4; ++i)
                 {
                     Button chosenButton;
                     do
@@ -121,7 +128,7 @@ namespace WPF_game
             if (x == 4 || x == 5 || x == 6)
             {
                 
-                for (int i = 0; i < 5; ++i)
+                for (int i = 0; i < 6; ++i)
                 {
                     Button chosenButton;
                     do
@@ -138,7 +145,7 @@ namespace WPF_game
             if (x >= 7  )
             {
                
-                for (int i = 0; i < 7; ++i)
+                for (int i = 0; i < 9; ++i)
                 {
                     Button chosenButton;
                     do
@@ -152,7 +159,6 @@ namespace WPF_game
                 foreach (Button button in randomButtons) { button.Background = Brushes.Gray; }
             }
 
-
         }
 
          
@@ -162,7 +168,7 @@ namespace WPF_game
             foreach (Button button in randomButtons) { button.Background = Brushes.Gray; }
 
 
-            Count.Content = $"Random {randomButtons.Count}. User Clicked {UserPickedButtons.Count}";
+            //Count.Content = $"Random {randomButtons.Count}. User Clicked {UserPickedButtons.Count}";
 
             MessageBoxResult result = MessageBox.Show("Sorry that wasn't the right one. Do you want to play again?",
                                   "Game Over",
@@ -187,6 +193,10 @@ namespace WPF_game
 
         private void button_Click(object sender, EventArgs e)
         {
+            if (IsDisplaying) {
+                return;
+            }
+
             Button current = (Button)sender;
 
             #region if current button is one of the chosen
@@ -299,7 +309,7 @@ namespace WPF_game
                 
             if (UserPickedButtons.Count == randomButtons.Count)
             {
-                Count.Content = $"Random {randomButtons.Count}. User Clicked {UserPickedButtons.Count}";
+              //  Count.Content = $"Random {randomButtons.Count}. User Clicked {UserPickedButtons.Count}";
                 x++;
 
                 foreach (Button button in randomButtons) { button.Background = Brushes.Green; }
