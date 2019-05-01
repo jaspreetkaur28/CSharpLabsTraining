@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_game"
         mc:Ignorable="d"
-        Title="MainWindow" Height="650" Width="1000">
+        Title="MainWindow" Height="600" Width="800">
     <Grid >
         
         <Grid.ColumnDefinitions>
@@ -44,10 +44,17 @@
         <Button x:Name="Button12" Grid.Row="3 " Grid.Column ="2" Background="#96c4ff" Click="button_Click"/>
         <Button x:Name="Button13" Grid.Row="3 " Grid.Column ="3" Background="#96c4ff" Click="button_Click"/>
         <Button x:Name="Button14" Grid.Row="3 " Grid.Column ="4" Background="#96c4ff" Click="button_Click"/>
-        <Button x:Name="Button15" Grid.Row="3 " Grid.Column ="5" Background="#96c4ff" Click="button_Click"/>
+        <Button x:Name="Button15" Grid.Row="3 " Grid.Column ="5" Background="#96c4ff" Click="button_Click"/>  
+        
+        <Button x:Name="Button16" Grid.Row="4" Grid.Column ="1" Background="#96c4ff" Click="button_Click"/>
+        <Button x:Name="Button17" Grid.Row="4 " Grid.Column ="2" Background="#96c4ff" Click="button_Click"/>
+        <Button x:Name="Button18" Grid.Row="4 " Grid.Column ="3" Background="#96c4ff" Click="button_Click"/>
+        <Button x:Name="Button19" Grid.Row="4 " Grid.Column ="4" Background="#96c4ff" Click="button_Click"/>
+        <Button x:Name="Button20" Grid.Row="4" Grid.Column ="5" Background="#96c4ff" Click="button_Click"/>
 
         <Label x:Name="Title" Grid.Row="0" Grid.Column ="1" Grid.ColumnSpan="4"/>
+        <Label x:Name="Count" Grid.Row="0" Grid.Column ="5"  />
 
-        <Label Name="lblTime" FontSize="22" HorizontalAlignment="Center" VerticalAlignment="Center" />
+     <!--   <Label Name="lblTime" FontSize="22" HorizontalAlignment="Center" VerticalAlignment="Center" /> -->
     </Grid>
 </Window>
