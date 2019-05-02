@@ -6,11 +6,11 @@ using System.Windows.Media;
 using System.Windows.Threading;
 
 
-//what to research - switch +case, Eventhandler, how to make the randomtiles disappear again.
 namespace WPF_game
 {
     public partial class MainWindow : Window
     {
+        #region Declares
         private int time = 4;
         private DispatcherTimer Timer;
         private bool IsDisplaying; // maybe called a flag
@@ -20,7 +20,7 @@ namespace WPF_game
         static List<Button> randomButtons = new List<Button>();
         static List<Button> UserPickedButtons = new List<Button>();
         static int x = 1;
-
+        #endregion
         public MainWindow()
         {
             InitializeComponent();
@@ -41,7 +41,6 @@ namespace WPF_game
             #endregion
 
         }
-
         private void Start_Click(object sender, RoutedEventArgs e) 
         {
             UserPickedButtons.Clear();
@@ -93,8 +92,6 @@ namespace WPF_game
                 item.Background = (Brush)bc.ConvertFrom("#96c4ff");
             }
         }
-
-
         public void RandomTiles()
         {
             ButtonRange = new Button[20]
@@ -149,10 +146,7 @@ namespace WPF_game
                 }
                 foreach (Button button in randomButtons) { button.Background = Brushes.Gray; }
             }
-
         }
-
-         
         private void GameOver()
         {
             Label.Text = null;
@@ -172,9 +166,6 @@ namespace WPF_game
             }
             else Application.Current.Shutdown();
         }
-
-
-
         private void button_Click(object sender, EventArgs e)
         {
             if (IsDisplaying) {

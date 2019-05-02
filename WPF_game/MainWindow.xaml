@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_game"
         mc:Ignorable="d"
-        Title="Pattern Matching Game" Height="600" Width="800">
+        Title="Pattern Matching Game - Created by Jaspreet Kaur Rai" Height="600" Width="800">
     <Grid >
         
         <Grid.ColumnDefinitions>
