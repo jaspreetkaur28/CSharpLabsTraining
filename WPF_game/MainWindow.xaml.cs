@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Media;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -149,6 +150,7 @@ namespace WPF_game
         }
         private void GameOver()
         {
+            SystemSounds.Beep.Play();
             Label.Text = null;
             foreach (Button button in randomButtons) { button.Background = Brushes.Gray; } 
 
@@ -281,7 +283,8 @@ namespace WPF_game
                 
             if (UserPickedButtons.Count == randomButtons.Count)
             {
-              //  Count.Content = $"Random {randomButtons.Count}. User Clicked {UserPickedButtons.Count}";
+                SystemSounds.Hand.Play();
+                //  Count.Content = $"Random {randomButtons.Count}. User Clicked {UserPickedButtons.Count}";
                 x++;
 
                 foreach (Button button in randomButtons) { button.Background = Brushes.Green; }
@@ -291,6 +294,7 @@ namespace WPF_game
                 Start.IsEnabled = true;
                 resetbuttons();
                 Label.Text = $"Round {x}";
+                IsDisplaying = true; // stops user pressing button after initialise flag 
             }
         }
 
