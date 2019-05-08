@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections;
+using System.Collections.Generic; 
 
 namespace lab_19_casting
 {
@@ -12,8 +10,8 @@ namespace lab_19_casting
         {
 
           //safe casting 
-            int i = 10;
-            double d = i;
+            int r = 10;
+            double d = r;
 
          // EXPLICIT (DANGEROUS)  CASTING 
             double dd = 10.79;
@@ -40,6 +38,27 @@ namespace lab_19_casting
             Console.WriteLine(jjj);
 
 
+
+            Stack<int> stack01 = new Stack<int>();
+            ArrayList ArrayList = new ArrayList();
+            Dictionary<int, int> Dictionary = new Dictionary<int, int>();
+
+
+
+            foreach (var item in stack01)
+            {
+                ArrayList.Add(stack01.Pop());
+            }
+
+            for (int i = 0; i < 5; i++)
+            {
+                object o = ArrayList[i];
+                int ArrayListNumber = (int)o;
+                Dictionary.Add(i, ArrayListNumber);
+
+
+
+            }
         }
     }
 }

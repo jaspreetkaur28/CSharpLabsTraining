@@ -184,6 +184,7 @@ namespace HomeworkWeek3
                     total += dictionary[key]; // sum total of the key in dictionary 
                 }
                 return total;
+
         }
 
     }

@@ -155,9 +155,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework_11_Classes_Methods
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework_12_Dog_Grows", "Homework_12_Dog_Grows\Homework_12_Dog_Grows.csproj", "{70FD8AEC-5B8E-450F-9BB6-76405F223DCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework_13_Stopwatch", "Homework_13_Stopwatch\Homework_13_Stopwatch.csproj", "{4B849807-76FF-47A8-A889-4B9B12FD1CEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework_13_Stopwatch", "Homework_13_Stopwatch\Homework_13_Stopwatch.csproj", "{4B849807-76FF-47A8-A889-4B9B12FD1CEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework_14_Polymorphism", "Homework_14_Polymorphism\Homework_14_Polymorphism.csproj", "{AAC5FABB-2F08-485C-90B3-22C11C9861FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework_14_Polymorphism", "Homework_14_Polymorphism\Homework_14_Polymorphism.csproj", "{AAC5FABB-2F08-485C-90B3-22C11C9861FA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "homework_15_ASCII", "homework_15_ASCII\homework_15_ASCII.csproj", "{AFFD8A40-8E07-416D-B2A7-5E2FE1DA26FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_57_revision", "lab_57_revision\lab_57_revision.csproj", "{CD0C47AF-1456-48D1-B270-59E682D2D40B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -477,6 +481,14 @@ Global
 		{AAC5FABB-2F08-485C-90B3-22C11C9861FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AAC5FABB-2F08-485C-90B3-22C11C9861FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AAC5FABB-2F08-485C-90B3-22C11C9861FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFFD8A40-8E07-416D-B2A7-5E2FE1DA26FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFFD8A40-8E07-416D-B2A7-5E2FE1DA26FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFFD8A40-8E07-416D-B2A7-5E2FE1DA26FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFFD8A40-8E07-416D-B2A7-5E2FE1DA26FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD0C47AF-1456-48D1-B270-59E682D2D40B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD0C47AF-1456-48D1-B270-59E682D2D40B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD0C47AF-1456-48D1-B270-59E682D2D40B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD0C47AF-1456-48D1-B270-59E682D2D40B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
