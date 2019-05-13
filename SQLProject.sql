@@ -121,7 +121,7 @@ ORDER BY [Total Sales] DESC
 SELECT TOP 10 Companyname, count(*) AS 'Total Orders Shipped in the latest year'
 FROM customers c
 INNER JOIN  Orders O  ON O.CustomerID = c.CustomerID  
-WHERE OrderDate > '1997-12-31 00:00:00.000'
+WHERE Year(OrderDate ) = (SELECT MAX(YEAR(OrderDate)) FROM Orders) /*not hard coded*/
 GROUP BY CompanyName/* groups so rows are equal to the function results*/
 ORDER BY 'Total Orders Shipped in the latest year' DESC
 
