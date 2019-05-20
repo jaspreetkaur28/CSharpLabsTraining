@@ -31,12 +31,9 @@ namespace lab_57_revision
         {
             this.Height = Height;
         }
+        public Dog() { }
     }
     class Spaniel : Dog
-    { 
-        public Spaniel()
-        {
-             
-        }
+    {  
     }
 }

@@ -52,52 +52,82 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Category.cs">
+      <DependentUpon>ERD_Northwind.tt</DependentUpon>
+    </Compile>
     <Compile Include="Customer.cs">
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
+      <DependentUpon>ERD_Northwind.tt</DependentUpon>
     </Compile>
-    <Compile Include="NorthwindModel.Context.cs">
+    <Compile Include="CustomerDemographic.cs">
+      <DependentUpon>ERD_Northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.cs">
+      <DependentUpon>ERD_Northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ERD_Northwind.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>NorthwindModel.Context.tt</DependentUpon>
+      <DependentUpon>ERD_Northwind.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="NorthwindModel.cs">
+    <Compile Include="ERD_Northwind.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>NorthwindModel.tt</DependentUpon>
+      <DependentUpon>ERD_Northwind.tt</DependentUpon>
     </Compile>
-    <Compile Include="NorthwindModel.Designer.cs">
+    <Compile Include="ERD_Northwind.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>NorthwindModel.edmx</DependentUpon>
+      <DependentUpon>ERD_Northwind.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs">
+      <DependentUpon>ERD_Northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Order_Detail.cs">
+      <DependentUpon>ERD_Northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>ERD_Northwind.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Region.cs">
+      <DependentUpon>ERD_Northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shipper.cs">
+      <DependentUpon>ERD_Northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier.cs">
+      <DependentUpon>ERD_Northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Territory.cs">
+      <DependentUpon>ERD_Northwind.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="NorthwindModel.edmx">
+    <EntityDeploy Include="ERD_Northwind.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>NorthwindModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>ERD_Northwind.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="NorthwindModel.edmx.diagram">
-      <DependentUpon>NorthwindModel.edmx</DependentUpon>
+    <None Include="ERD_Northwind.edmx.diagram">
+      <DependentUpon>ERD_Northwind.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="NorthwindModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>NorthwindModel.edmx</DependentUpon>
-      <LastGenOutput>NorthwindModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="NorthwindModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>NorthwindModel.edmx</DependentUpon>
-      <LastGenOutput>NorthwindModel.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Content Include="ERD_Northwind.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ERD_Northwind.edmx</DependentUpon>
+      <LastGenOutput>ERD_Northwind.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ERD_Northwind.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ERD_Northwind.edmx</DependentUpon>
+      <LastGenOutput>ERD_Northwind.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

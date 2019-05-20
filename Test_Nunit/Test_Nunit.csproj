@@ -18,6 +18,7 @@
     <ProjectReference Include="..\Homework_9_NUNIT\Homework_9_NUNIT.csproj" />
     <ProjectReference Include="..\lab_102_homework\lab102_homework.csproj" />
     <ProjectReference Include="..\lab_42_testme\lab_42_testme.csproj" />
+    <ProjectReference Include="..\RabbitPopulationExplosion\RabbitPopulationExplosion.csproj" />
   </ItemGroup>
 
 </Project>

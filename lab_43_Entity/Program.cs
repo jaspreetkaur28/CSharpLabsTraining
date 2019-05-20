@@ -14,7 +14,7 @@ namespace lab_43_Entity
         {
             //automatically cleans up the database connection when it completed
             //doesnt use up anymore memory and leave unwanted stuff
-            using (var db = new NorthwindEntities())
+           /* using (var db = new NorthwindEntities())
             {
                 var customers = db.Customers.ToList();
                 foreach (var customer in customers)
@@ -53,7 +53,7 @@ namespace lab_43_Entity
             }
             finally { //close database
             }
-
+            */
 
 
 

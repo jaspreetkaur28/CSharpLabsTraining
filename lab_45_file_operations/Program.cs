@@ -106,21 +106,20 @@ namespace lab_45_file_operations
              * 
              */
             //Create in MyDocuments
-            var MyDocuments = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            Directory.CreateDirectory((MyDocuments) + "\\LabFile");
+             Directory.CreateDirectory((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\LabFile");
             
-            var filelist = (Directory.EnumerateFiles(MyDocuments) + "\\LabFile");
+            var filelist = (Directory.EnumerateFiles(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\LabFile");
 
            //  var bobisthere = false; 
             foreach (var item in filelist)
             {
-                Console.WriteLine((MyDocuments) + "\\LabFile");
+                Console.WriteLine((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\LabFile");
                 Console.WriteLine(item);
-                if (item ==   MyDocuments + "\\LabFile\\bobfile.txt")
+              /*  if (item  == Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\LabFile\\bobfile.txt")
                 {
                     //bobisthere = true;
                     Console.WriteLine("bob is there");
-                } else Console.WriteLine("no bob");
+                } else Console.WriteLine("no bob"); */
             }
            
 

@@ -131,26 +131,24 @@ namespace homework_15_ASCII
             {
                 stack01.Push(item);
             }
-            /*
+
+            //for (int i = 0; i < stack01.Count; i++)
+            //{
+            //    ArrayList.Add(stack01.Pop());
+            //}
             foreach (var item in stack01)
             {
-                ArrayList.Add(stack01.Pop());
+                ArrayList.Add(item);
             }
 
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < ArrayList.Count; i++)
             {
                 object obj = ArrayList[i]; // unboxing 
                 int AL = (int)obj;
                 Dictionary.Add(i, AL);
             }
 
-    */
-            for (int i = 0; i < 5; i++)
-            {
-                Dictionary[i] = stack01.Pop() ;
-                // pops it to normal again and times by 2 and gives it a value
-            }
-
+ 
             int total4 = 0;
             foreach (var key in Dictionary.Keys)
             {
@@ -199,7 +197,7 @@ namespace homework_15_ASCII
             }
             foreach (var item in stack01)
             {
-                ArrayList.Add(stack01.Pop());
+                ArrayList.Add(item);
             }
             
             for (int i = 0; i < 5; i++)

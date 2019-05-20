@@ -1,0 +1,18 @@
+﻿ 
+@{
+    ViewBag.Title = "title"; 
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var displaystring = "Some Data lol";
+    var number = 10; 
+}
+<h1>Hello World! </h1>
+<p>Welcome to your new Razor Page</p>
+
+<h2>@ViewBag.Title.</h2>
+<h2>@ViewBag.Message</h2>
+
+@ViewData["message3"]
+
+
+<p>I am now displaying some data ----@displaystring</p>
+<p>Number is @number</p>
