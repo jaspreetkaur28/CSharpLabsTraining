@@ -1,18 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using lab_44_entity;
 
 namespace hw_104_WPF_Northwind_entity_project
 {
@@ -56,7 +46,7 @@ namespace hw_104_WPF_Northwind_entity_project
         }
 
         private void Customers_Click(object sender, RoutedEventArgs e)
-        { 
+        {
 
             CustomersButton = true;
             EmployeeButton = false;
@@ -159,13 +149,13 @@ namespace hw_104_WPF_Northwind_entity_project
         }
         private void ListBox2_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-                order = (Order)ListBox2.SelectedItem;
-                using (var db = new NorthwindEntities2())
-                {
-                    ODList = db.Order_Details.Where(od => od.OrderID == order.OrderID).ToList();
-                    ListBox3.DisplayMemberPath = "ProductID";
-                    ListBox3.ItemsSource = ODList; 
-                }
+            order = (Order)ListBox2.SelectedItem;
+            using (var db = new NorthwindEntities2())
+            {
+                ODList = db.Order_Details.Where(od => od.OrderID == order.OrderID).ToList();
+                ListBox3.DisplayMemberPath = "ProductID";
+                ListBox3.ItemsSource = ODList;
+            }
 
         }
         private void ListBox3_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -173,5 +163,5 @@ namespace hw_104_WPF_Northwind_entity_project
         }
 
 
-        }
+    }
 }

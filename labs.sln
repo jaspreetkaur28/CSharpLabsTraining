@@ -197,6 +197,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitWPF", "RabbitWPF\Rabb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hw_104_WPF_Northwind_entity_project", "hw_104_WPF_Northwind_entity_project\hw_104_WPF_Northwind_entity_project.csproj", "{4F5418B2-2C91-40F8-A5AA-6C8688B973F4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_69_WPF_Entity_CRUD", "lab_69_WPF_Entity\lab_69_WPF_Entity_CRUD.csproj", "{87916808-8336-484A-98BD-7E17A43814BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_70_LINQ", "lab_70_LINQ\lab_70_LINQ.csproj", "{F6D92858-BAB5-49EC-BF26-9C2A5443E577}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_71_Lazy_loading", "lab_71_Lazy_loading\lab_71_Lazy_loading.csproj", "{E6C21942-D6C4-4583-9C1B-D61098ECF6A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_72_LINQ_Join", "lab_72_LINQ_Join\lab_72_LINQ_Join.csproj", "{02A551C1-807D-44D7-B95F-A561F4B0AA54}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -591,6 +599,22 @@ Global
 		{4F5418B2-2C91-40F8-A5AA-6C8688B973F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F5418B2-2C91-40F8-A5AA-6C8688B973F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F5418B2-2C91-40F8-A5AA-6C8688B973F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87916808-8336-484A-98BD-7E17A43814BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87916808-8336-484A-98BD-7E17A43814BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87916808-8336-484A-98BD-7E17A43814BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87916808-8336-484A-98BD-7E17A43814BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6D92858-BAB5-49EC-BF26-9C2A5443E577}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6D92858-BAB5-49EC-BF26-9C2A5443E577}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6D92858-BAB5-49EC-BF26-9C2A5443E577}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6D92858-BAB5-49EC-BF26-9C2A5443E577}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6C21942-D6C4-4583-9C1B-D61098ECF6A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6C21942-D6C4-4583-9C1B-D61098ECF6A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6C21942-D6C4-4583-9C1B-D61098ECF6A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6C21942-D6C4-4583-9C1B-D61098ECF6A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02A551C1-807D-44D7-B95F-A561F4B0AA54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02A551C1-807D-44D7-B95F-A561F4B0AA54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02A551C1-807D-44D7-B95F-A561F4B0AA54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02A551C1-807D-44D7-B95F-A561F4B0AA54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

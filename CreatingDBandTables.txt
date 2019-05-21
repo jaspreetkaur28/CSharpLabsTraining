@@ -1,0 +1,94 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+
+=======================================VERSION 1 =======================================
+PS C:\Users\JRai> cd /
+PS C:\> cd data
+PS C:\data> SQLite3
+SQLite version 3.28.0 2019-04-16 19:49:53
+Enter ".help" for usage hints.
+Connected to a transient in-memory database.
+Use ".open FILENAME" to reopen on a persistent database.
+
+
+PS C:\data> sqlite3 test.db;
+SQLite version 3.28.0 2019-04-16 19:49:53
+Enter ".help" for usage hints.
+
+sqlite> .databases
+main: C:\data\test.db
+
+PS C:\data> ls
+
+
+    Directory: C:\data
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----       21/05/2019     16:50         498176 sqldiff.exe
+-a----       21/05/2019     16:50         928768 sqlite3.exe
+-a----       21/05/2019     16:50        2012672 sqlite3_analyzer.exe
+-a----       21/05/2019     17:19          12288 test.db
+
+
+sqlite> attach 'test.db' as testdb;
+sqlite>
+sqlite>  CREATE TABLE testdb.COMPANY(
+   ...>    ID INT PRIMARY KEY     NOT NULL,
+   ...>    NAME           TEXT    NOT NULL
+   ...> );
+Error: table COMPANY already exists
+sqlite> .tables
+testdb.COMPANY
+sqlite> .database
+main:
+testdb: C:\data\test.db
+
+sqlite> INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY)
+   ...> VALUES (2, 'Allen', 25, 'Texas', 15000.00 );
+sqlite>
+sqlite> INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY)
+   ...> VALUES (1, 'Paul', 32, 'California', 20000.00 );
+sqlite>
+sqlite>
+sqlite> INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY)
+   ...> VALUES (3, 'Teddy', 23, 'Norway', 20000.00 );
+sqlite>
+sqlite> INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY)
+   ...> VALUES (4, 'Mark', 25, 'Rich-Mond ', 65000.00 );
+sqlite>
+sqlite> INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY)
+   ...> VALUES (5, 'David', 27, 'Texas', 85000.00 );
+sqlite>
+sqlite> INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY)
+   ...> VALUES (6, 'Kim', 22, 'South-Hall', 45000.00 );
+sqlite> select * from company;
+2|Allen|25|Texas|15000.0
+1|Paul|32|California|20000.0
+3|Teddy|23|Norway|20000.0
+4|Mark|25|Rich-Mond |65000.0
+5|David|27|Texas|85000.0
+6|Kim|22|South-Hall|45000.0
+sqlite>
+
+
+=======================================VERSION 2 =======================================
+
+PS C:\data> sqlite3 test2.db;
+SQLite version 3.28.0 2019-04-16 19:49:53
+Enter ".help" for usage hints.
+sqlite> attach 'test2.db' as test2;
+sqlite> Create Table test2.Person(ID int primary key not null, name text not null);
+sqlite> .database
+main: C:\data\test2.db
+test2: C:\data\test2.db
+sqlite> .tables
+Person        test2.Person
+sqlite> insert into Person(ID,name) values(1,'Jane'),(2,'John'),(3,'Doe');
+sqlite> select * from Person;
+1|Jane
+2|John
+3|Doe
+sqlite>
