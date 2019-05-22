@@ -205,6 +205,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_71_Lazy_loading", "lab_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_72_LINQ_Join", "lab_72_LINQ_Join\lab_72_LINQ_Join.csproj", "{02A551C1-807D-44D7-B95F-A561F4B0AA54}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Garbage_Collector", "Garbage_Collector\Garbage_Collector.csproj", "{1D8087D8-1AB8-4DCB-A33D-6FD4A13342A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -615,6 +617,10 @@ Global
 		{02A551C1-807D-44D7-B95F-A561F4B0AA54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02A551C1-807D-44D7-B95F-A561F4B0AA54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02A551C1-807D-44D7-B95F-A561F4B0AA54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D8087D8-1AB8-4DCB-A33D-6FD4A13342A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D8087D8-1AB8-4DCB-A33D-6FD4A13342A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D8087D8-1AB8-4DCB-A33D-6FD4A13342A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D8087D8-1AB8-4DCB-A33D-6FD4A13342A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
