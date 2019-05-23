@@ -26,11 +26,11 @@
         <TextBox x:Name="TB4"  Grid.Row="0" Grid.Column="4" Background="#ffa082"  />
         <TextBox x:Name="TB1"  Grid.Row="1" Grid.Column="4" Background="#ffa082"  />
         <TextBox x:Name="TB2"  Grid.Row="2" Grid.Column="4" Background="#ffa082"  />
-        <TextBox x:Name="TB3"  Grid.Row="3" Grid.Column="4" Background="#ffa082"  />   
+        <TextBox x:Name="TB3"  Grid.Row="3" Grid.Column="4" Background="#ffa082"  />
         <Button x:Name="ListCustomersButton"  Grid.Row="0" Grid.Column="0" Background="#ffa082" Content="Customers" Click="ListCustomersButton_Click" Grid.RowSpan="4"/>
         <Button x:Name="Clear"  Grid.Row="0" Grid.Column="5" Background="#ffd4c6" Content="Clear" Click="Clear_Click"  />
         <Button x:Name="Add"  Grid.Row="1" Grid.Column="5" Background="#ffd4c6" Content="New"   Click="Add_Click" />
-        <Button x:Name="Edit"  Grid.Row="2" Grid.Column="5" Background="#ffd4c6" Content="Edit" Click="Edit_Click" />
+        <Button x:Name="Edit"  Grid.Row="2" Grid.Column="4" Background="#ffd4c6" Content="Edit" Click="Edit_Click" Grid.ColumnSpan="2" Height="37" Margin="126,0,-0.4,0" Grid.RowSpan="2" VerticalAlignment="Top" />
         <Button x:Name="Delete"  Grid.Row="3" Grid.Column="5" Background="#ffd4c6" Content="Delete" Click="Delete_Click"/>
 
         <Button x:Name="ListProducts"  Grid.Row="0" Grid.Column="1" Background="#ffa082" Content="Products" Click="ListProducts_Click" Grid.RowSpan="4"/>

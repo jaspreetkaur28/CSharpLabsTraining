@@ -141,7 +141,7 @@ namespace lab_69_WPF_Entity
                 return;
             }
             order = ListBox2.SelectedItem as Order;
-            orderdetail = (Order_Detail)ListBox3.SelectedItem;
+           // orderdetail = (Order_Detail)ListBox3.SelectedItem;
 
             using (var db = new NorthwindEntities())
             {
