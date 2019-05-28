@@ -16,6 +16,8 @@
     <ProjectReference Include="..\homework_10_Nunit\homework_10_Nunit.csproj" />
     <ProjectReference Include="..\homework_15_ASCII\homework_15_ASCII.csproj" />
     <ProjectReference Include="..\Homework_9_NUNIT\Homework_9_NUNIT.csproj" />
+    <ProjectReference Include="..\hw_lab_107_enum\hw_107_enum.csproj" />
+    <ProjectReference Include="..\InterviewPrep\hw_106_InterviewPrep.csproj" />
     <ProjectReference Include="..\lab_102_homework\lab102_homework.csproj" />
     <ProjectReference Include="..\lab_42_testme\lab_42_testme.csproj" />
     <ProjectReference Include="..\RabbitPopulationExplosion\RabbitPopulationExplosion.csproj" />

@@ -28,24 +28,25 @@ namespace hw_105_ToDoDatabase
 
         static User UserSelected;
         static User newUser;
-        static User UpdateUser;
-        static User DeleteUser;
 
         static Category CatSelected;
+        static Category CatSelectedShow;
+        static Category newCategory;
+        static Category CatJoin;
+
+
+        static Task DateSelected;
         static Task DoneSelected;
 
         static Task TaskSelected;
-        static Task UpdateTask;
-        static Task DeleteTask;
         static Task newTask;
-        static Task TaskDisplay;
 
 
 
         public MainWindow()
         {
             InitializeComponent();
-            Initialize(); 
+            Initialize();
         }
         //view users and categories via ComboBox
         void Initialize()
@@ -53,11 +54,21 @@ namespace hw_105_ToDoDatabase
             using (var db = new ToDo())
             {
                 RefreshUser();
-                RefreshCategory(); 
+                RefreshCategory();
             }
         }
 
+        void selected() {
+            UserSelected = (User)UserCB.SelectedItem;
+            TaskSelected = (Task)MainListBox.SelectedItem;
+            CatSelected = (Category)CatCB.SelectedItem;
+            CatSelectedShow = (Category)UpdateCatCB.SelectedItem;
 
+
+            // DateSelected = (Task)UpdateDateStart.SelectedDate;
+            // DoneSelected = (Task)DoneCB.SelectedItem;
+
+        }
         #region USER ------ ADD  EDIT DELETE
         //Working
         private void AddUser_Click(object sender, RoutedEventArgs e)
@@ -70,84 +81,78 @@ namespace hw_105_ToDoDatabase
                 };
                 db.Users.Add(newUser);
                 db.SaveChanges();
-                MainTextBox.Text = null;
+
 
                 MessageBox.Show($"Welcome {MainTextBox.Text}");
-
+                MainTextBox.Text = null;
                 RefreshUser();
 
             }
         }
 
-        //Not implemented
+        //Working
         private void EditUser_Click(object sender, RoutedEventArgs e)
         {
-            using (var db = new ToDo())
+            selected();
+            if (MainTextBox.Text == "") { return; }
+            else if (MainTextBox.Text != null)
             {
-               // UserSelected = (User)UserSelected.SelectedItem;
-                if (UserSelected != null)
+                using (var db = new ToDo())
                 {
-                    UpdateUser = db.Users.Where(c => c.UserID == UserSelected.UserID).FirstOrDefault();
-                    UpdateUser.UserName = MainTextBox.Text;
-                    db.SaveChanges();
+                    // UserSelected = (User)UserSelected.SelectedItem;
+                    if (UserSelected != null)
+                    {
+                        UserSelected = db.Users.Where(c => c.UserID == UserSelected.UserID).FirstOrDefault();
+                        UserSelected.UserName = MainTextBox.Text;
+                        db.SaveChanges();
+                    }
+                    MessageBox.Show("Name updated to " + MainTextBox.Text);
                 }
-                RefreshTask();
-
-                MessageBox.Show("Update has been saved");
             }
+            RefreshUser();
+            MainTextBox.Text = null;
         }
 
-        //Working
+        //Working for empty users
         private void DeleteUser_Click(object sender, RoutedEventArgs e)
         { // maybe give user an assigned value to see if they are active ( have any pending tasking) else delete all tasks with them. 
-
+            selected();
             using (var db = new ToDo())
             {
                 MessageBoxResult result = MessageBox.Show($"Are you sure you want to delete this data?", "Delete", MessageBoxButton.YesNo, MessageBoxImage.Question);
                 if (result == MessageBoxResult.Yes)
                 {
-                    DeleteUser = db.Users.Where(O => O.UserID == UserSelected.UserID).FirstOrDefault();
 
-                    db.Users.Remove(DeleteUser);
-
-//not working for users with tasks
-                    DeleteTask = db.Tasks.Where(O => O.TaskID == TaskSelected.TaskID).FirstOrDefault();
-
-                    db.Tasks.Remove(DeleteTask);
-                    
-
+                    UserSelected = db.Users.Where(O => O.UserID == UserSelected.UserID).FirstOrDefault();
+                    db.Users.Remove(UserSelected);
 
                     db.SaveChanges();
-
-
+                    MessageBox.Show(UserSelected.UserName + " has been deleted");
                 }
                 else return;
-
                 RefreshUser();
-
-
             }
-
-            MessageBox.Show("User has been deleted");
         }
+  ////not working for users with tasks
+                    //DeleteTask = db.Tasks.Where(O => O.TaskID == TaskSelected.TaskID).FirstOrDefault();
 
- #endregion
+                    //db.Tasks.Remove(DeleteTask);
+        #endregion
 
 
- #region TASK  ------ ADD Edit DELETE
+        #region TASK  ------ ADD Edit DELETE
 
         //WORKING
         private void AddTask_Click(object sender, RoutedEventArgs e)
         {
-
-            CatSelected = (Category)CatCB.SelectedItem;
+            selected();
             using (var db = new ToDo())
             {
                 newTask = new Task()
                 {
                     TaskName = TaskTB.Text,
                     UserID = UserSelected.UserID,
-                    CategoryID =  CatSelected.CategoryID
+                    CategoryID = CatSelected.CategoryID
 
                 };
                 db.Tasks.Add(newTask);
@@ -162,49 +167,55 @@ namespace hw_105_ToDoDatabase
         {
             using (var db = new ToDo())
             {
-                CatSelected = (Category)UpdateCatCB.SelectedItem;
+                selected();
                 if (TaskSelected != null)
                 {
-                    UpdateTask = db.Tasks.Where(c => c.TaskID == TaskSelected.TaskID).FirstOrDefault(); 
-                    UpdateTask.Done = Updatecheckbox.IsChecked;
-                    UpdateTask.CategoryID = CatSelected.CategoryID;
-                 //   UpdateTask.DateStarted = UpdateDateStart. 
-                 //   UpdateTask.DateCompleted = UpdateDateCompleted.
+                    TaskSelected = db.Tasks.Where(c => c.TaskID == TaskSelected.TaskID).FirstOrDefault();
+                    CatSelectedShow = db.Categories.Where(o => o.CategoryID == CatSelectedShow.CategoryID).FirstOrDefault();
+
+                    TaskSelected.CategoryID = CatSelectedShow.CategoryID;
+                    TaskSelected.TaskName = tb1.Text;
+
+                    //   UpdateTask.DateStarted = UpdateDateStart. 
+                    //   UpdateTask.DateCompleted = UpdateDateCompleted.
+                    if (FakeTB3 == null) { TaskSelected.Done = false; }
+                    else { TaskSelected.Done = true; }
+
 
                     db.SaveChanges();
                 }
-                RefreshTask();
                 
+
                 MessageBox.Show("Update has been saved");
             }
+            TaskSelect();
 
-           
         }
 
 
         //Working
         private void DeleteTask_Click(object sender, RoutedEventArgs e)
         {
-
+            selected();
             using (var db = new ToDo())
             {
-                MessageBoxResult result = MessageBox.Show($"Are you sure you want to delete this data?", "Delete", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                MessageBoxResult result = MessageBox.Show($"Are you sure you want to delete this task?", "Delete", MessageBoxButton.YesNo, MessageBoxImage.Question);
                 if (result == MessageBoxResult.Yes)
                 {
-                    DeleteTask = db.Tasks.Where(O => O.TaskID == TaskSelected.TaskID).FirstOrDefault();
+                    TaskSelected = db.Tasks.Where(O => O.TaskID == TaskSelected.TaskID).FirstOrDefault();
 
-                    db.Tasks.Remove(DeleteTask);
+                    db.Tasks.Remove(TaskSelected);
                     db.SaveChanges();
                 }
                 else return;
 
                 TaskList = db.Tasks.Where(O => O.UserID == UserSelected.UserID).ToList();
                 MainListBox.ItemsSource = TaskList;
-                MainListBox.DisplayMemberPath = "TaskName";
+                MainListBox.DisplayMemberPath = "TaskName"; 
 
             }
 
-            MessageBox.Show( "Data has been deleted");
+            MessageBox.Show(TaskSelected.TaskName + " has been deleted");
         }
         #endregion
 
@@ -231,8 +242,8 @@ namespace hw_105_ToDoDatabase
                 UpdateCatCB.ItemsSource = CatList;
 
             }
-        }       
-        
+        }
+
         //working
         void RefreshTask()
         {
@@ -243,7 +254,7 @@ namespace hw_105_ToDoDatabase
                 MainListBox.DisplayMemberPath = "TaskName";
             }
         }
- #endregion
+        #endregion
 
 
         //Working view tasks
@@ -251,7 +262,7 @@ namespace hw_105_ToDoDatabase
         {
             if (UserCB.SelectedItem != null)
             {
-                UserSelected = (User)UserCB.SelectedItem;
+                selected();
                 using (var db = new ToDo())
                 {
                     TaskList = db.Tasks.Where(O => O.UserID == UserSelected.UserID).ToList();
@@ -259,47 +270,62 @@ namespace hw_105_ToDoDatabase
                     MainListBox.DisplayMemberPath = "TaskName";
 
                 }
-            } 
+            }
         }
 
         //Working
         private void MainListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            tb1.Text = null;
             if (MainListBox.SelectedItem != null)
-            {
-               // DoneSelected = (Task)DoneCB.SelectedItem;
-                TaskSelected = (Task)MainListBox.SelectedItem;
-                using (var db = new ToDo())
-                {
-                    //  TaskDisplay = db.Tasks.Where(c => c.TaskID == TaskSelected.TaskID).FirstOrDefault();
-
-                    TaskList = db.Tasks.Where(O => O.TaskID == TaskSelected.TaskID).ToList();
-
-
-                  //  CatList = db.Categories.Where(O => O.CategoryID = TaskList.CategoryID).ToList();
-                    FakeTB4.DisplayMemberPath = "CategoryName";
-                    FakeTB4.ItemsSource = TaskList;
-
-
-                   
-
-                    //Viewcheckbox
-                    FakeTB1.ItemsSource = TaskList;
-                    FakeTB1.DisplayMemberPath = "Done";  
-
-                    FakeTB2.ItemsSource = TaskList;
-                    FakeTB2.DisplayMemberPath = "DateStarted";
-                    FakeTB3.ItemsSource = TaskList;
-                    FakeTB3.DisplayMemberPath = "DateCompleted";
-                  //  FakeTB4.ItemsSource = TaskList;
-                 //   FakeTB4.DisplayMemberPath = "CategoryID"; // change to view name instead of id
-
-
-                }
+            {   selected();
+                TaskSelect();
             }
         }
 
+        void TaskSelect()
+        {
+            using (var db = new ToDo())
+            {
+                TaskList = db.Tasks.Where(O => O.TaskID == TaskSelected.TaskID).ToList();
+                TaskSelected = db.Tasks.Where(O => O.TaskID == TaskSelected.TaskID).FirstOrDefault();
 
+                //     FakeTB1.ItemsSource = TaskList;
+                //    FakeTB1.DisplayMemberPath = "Done"; 
+
+                Viewcheckbox.IsChecked = TaskSelected.Done;
+                FakeTB2.ItemsSource = TaskList;
+                FakeTB2.DisplayMemberPath = "DateStarted";
+                FakeTB3.ItemsSource = TaskList;
+                FakeTB3.DisplayMemberPath = "DateCompleted";
+                FakeTB4.ItemsSource = TaskList;
+                FakeTB4.DisplayMemberPath = "CategoryID"; // change to view name instead of id
+                UpdateDateStart.DisplayDateStart = TaskSelected.DateStarted;
+
+
+                //   CatJoin = db.Tasks.Where(c => c.TaskID == TaskSelected.TaskID).FirstOrDefault();
+                //   UpdateTask.DateStarted = UpdateDateStart. 
+                //   UpdateTask.DateCompleted = UpdateDateCompleted.
+
+                db.SaveChanges();
+
+            }
+            tb1.Text = TaskSelected.TaskName;
+            //   tb2.Text = TaskSelected.CategoryName;
+            //   UpdateDateStart.DisplayDate= TaskSelected.DateStarted;
+            UpdateDateStart.DisplayDateStart = TaskSelected.DateStarted;
+            UpdateDateCompleted.DisplayDateEnd = TaskSelected.DateCompleted;
+
+
+            // tb2.Text = UpdateTask.CategoryName;
+
+            //  tbhidden.Text = 
+            //    CatSelected.CategoryID = UpdateTask.CategoryID;
+            //   UpdateTask.DateStarted = DateSelected.DateStarted;
+            // UpdateTask.Done = Updatecheckbox.IsChecked;
+
+
+        }
 
     }
-} 
+}

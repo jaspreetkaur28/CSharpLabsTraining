@@ -1,0 +1,151 @@
+﻿@page
+@model lab_80_ASP_Core_Web.Pages.JaspreetModel
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{ 
+    //code 
+    //two ways of sotring trivial strings : viewdata and viewbag 
+    ViewData["Value"] = "here is some data";
+    ViewBag.Value2 = "And some more data here - ViewBag";
+}
+
+<i><b><u>We don't really use Bold Italic underline any more 
+    </u></b></i>
+s
+
+<p style="font-weight:bold">@ViewData["Value"]</p>
+<p style="font-style:italic">@ViewData["ViewBag.Value2"]</p>
+<p>We can also use 'em' for emphasis bold <span><em>@ViewBag.Value</em></span></p>
+<p>We can also use 'strong' for emphasis bold <span><strong>@ViewBag.Value</strong></span></p>
+
+
+<p>We can also use them for emphasis bold <h1>@ViewBag.Value</h1></p>
+<p>We can also use them for emphasis bold <div>@ViewBag.Value</div></p>
+<p>We can also use them for emphasis bold <p>@ViewBag.Value</p></p>
+<!-- p is a block element. always starts at a new line. H1 header also starts a new line -->
+
+<p>Finally to underline we use <span style="text-decoration:underline"> text-decoration : underline</span></p>
+<h1>This is my amazing test page </h1>
+<p> vyk jbeufvu;ero b;oudfbubu;odfbojfblsfal </p>
+
+<h1>   Using Razor</h1>
+
+<h2> The 'at' symbol can be used to write C# code raw on top of HTML</h2>
+
+<h3>@DateTime.Now</h3>
+@{
+    var d = DateTime.Now;
+    d = d.AddDays(2); 
+}
+<h4>The date in 2 days time is @d.ToShortDateString()</h4>
+
+<ul>
+    <li>first</li>
+    <li>second</li>
+    <li>third</li>
+</ul>
+
+<ol>
+    <li>first</li>
+    <li>second</li>
+    <li>third</li>
+</ol>
+
+<ul>
+   @for (int i = 1; i <= 10 ; i++)
+   {
+       <li>Your item has number @i  </li>
+   }
+</ul>
+
+<h2> This is also Bootstrap</h2>
+<style>
+
+</style>
+<button class="btn btn-success"> CLICK HERE</button>
+<button class="btn btn-danger"> CLICK HERE</button>
+<button class="btn btn-default"> CLICK HERE</button>
+<button class="btn btn-info"> CLICK HERE</button>
+<button class="btn btn-primary "> CLICK HERE</button>
+
+<h2>    This is a HMTL table   </h2>
+<table class="table table-hover table-bordered table-striped">
+    <tr>
+        <th>header</th>
+        <th>goes</th>
+        <th>here</th>
+        <th>there</th>
+        <th>every</th>
+        <th>where</th>
+    </tr>
+    <tr>
+        <td>also</td>
+        <td>dvsv</td>
+        <td>sssd</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>fdsf</td>
+        <td>sdf</td>
+        <td>fdfds</td>
+    </tr>
+</table>
+
+
+
+<table>
+    <tr>
+        <th>some</th>
+        <th>text</th>
+        <th>here</th>
+        <th>there</th>
+        <th>every</th>
+        <th>where</th>
+    </tr>
+    <tr>
+        <td>lol</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>

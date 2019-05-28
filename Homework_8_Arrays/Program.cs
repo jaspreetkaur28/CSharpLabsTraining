@@ -11,8 +11,22 @@ namespace Homework_8_Arrays
     {
         static void Main(string[] args)
         {
- 
-           string[] array01 = new string[5] { "hii", "there", "how", "are", "you" };
+            for (int i = 0; i < 100; i+=4)
+            {
+                Console.WriteLine(i);
+            }
+
+
+            for (int i = 0; i < 100; i++)
+            {
+                if(i%4==0)
+                    Console.WriteLine(i);
+            }
+
+
+
+
+            string[] array01 = new string[5] { "hii", "there", "how", "are", "you" };
 
             foreach (string item in array01)
             {
@@ -28,6 +42,8 @@ namespace Homework_8_Arrays
             {
                 Console.WriteLine(item);
             }
+
+            
         }
     }
 }

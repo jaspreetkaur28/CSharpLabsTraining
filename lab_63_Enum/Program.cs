@@ -13,6 +13,19 @@ namespace lab_63_Enum
             Console.WriteLine($"There are {(int)Fruit.count} types of fruits");
             //an an invaild type with -1
             // cast to int - chnages the value to an int from array
+
+
+            int i = 5;
+            Console.WriteLine(++i);
+            Console.WriteLine(i);
+            Console.WriteLine(i++);
+
+            int x = 10; // x = 
+            int y = ++x; // y = 
+            Console.WriteLine(y);
+            int z = y++;
+            Console.WriteLine(z); // z = ?
+
         }
     }
     //Enum is a structure to hold values which are not expected to change, ever. 

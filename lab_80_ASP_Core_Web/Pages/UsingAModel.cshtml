@@ -1,0 +1,52 @@
+﻿@page
+@model lab_80_ASP_Core_Web.Pages.UsingAModelModel
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<hr />
+<hr />
+<hr />
+<!-- use # with id          but . with class-->
+<style>
+    div.block {
+        width: 70%; /* Note that we can use 50 vm aswell */
+        width: 70%; /* Note that we can use 50 vm aswell */
+        padding: 3vh 5vw;
+        background-color: #1e900f;
+        text-align: center;
+        font-size: 2.1em; /*one 'em' means standard size text,
+        dont use pixels are its hard coded so isnt great for mobiles*/
+        margin-left: 13vw;
+        margin-top:5vh
+
+
+
+        /* homework help .css_flex_04_center {
+    display: flex;
+    width: 400px;
+    background-color: lightgrey;
+    justify-content: center;
+}*/
+    }
+</style>
+
+<div class="block">
+    @Model.Property01
+</div>
+<div class="block">
+    @Model.Property01
+</div>
+<div class="block">
+    @Model.Property01
+</div>
+<div class="block">
+    @Model.Property01
+</div>
+<div class="block">
+    @Model.Property01
+</div>
+
+
+
+

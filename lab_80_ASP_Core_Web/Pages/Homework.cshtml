@@ -1,0 +1,51 @@
+﻿@page
+@model lab_80_ASP_Core_Web.Pages.HomeworkModel
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<style>
+    div.block {
+        display: flex; 
+        height: 200px;
+        width: 200px;
+        background-color: #00ff90; 
+        padding: 10px 10px;
+        text-align: center;
+        font-size: 1em;
+        margin: 10px; 
+    }
+
+    div.blockmain {
+        display: flex;
+        width: 70%;
+        background-color: lightgrey;
+        justify-content: center;
+        padding: 3vh 5vw; 
+        margin-left: 13vw; 
+    }
+</style>
+
+
+
+<div class="blockmain">
+
+    <div class="block">
+        @Model.Something1
+    </div>
+
+    <div class="block">
+        @Model.Something2
+    </div>
+    <div class="block">
+        @Model.Something3
+    </div>
+</div>
+
+
+
+
+
+
+
+

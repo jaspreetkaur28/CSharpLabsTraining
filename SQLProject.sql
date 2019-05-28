@@ -95,8 +95,7 @@ INSERT INTO [dbo].[SPARTANS] ([SpartanId], [Title], [FirstName], [LastName] , [U
 					         (2, 'Mr', 'Sebastian', 'Trifa', 'Bristol', 'Msc Physical with Astrophysics',100,'2014')
  SET IDENTITY_INSERT [dbo].[SPARTANS] OFF /* ends inserting data */
 
-
-
+ 
 /*3.1 List all Employees from the Employees table and who they report to. No Excel required. (5 Marks) */
 SELECT 
 E.FirstName + ' ' + E.LastName AS 'Full Name', 
