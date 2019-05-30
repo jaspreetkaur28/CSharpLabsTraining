@@ -1,0 +1,38 @@
+﻿@page
+@model lab_80_ASP_Core_Web.Pages.EmployeesModel
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<hr />
+<hr />
+<hr />
+<h1>Employees Table</h1>
+<hr />
+<hr />
+<hr />
+
+<table class="table table-striped table-hover table-bordered">
+    <tr>
+        <th>Employee ID</th>
+        <th>Last Name</th>
+        <th>First Name</th>
+        <th>Title</th>
+
+
+    </tr>
+
+
+    @foreach (var item in Model.EmpList)
+    {
+        <tr>
+            <td>@item.EmployeeID</td>
+            <td>@item.LastName</td>
+            <td>@item.FirstName</td>
+            <td>@item.Title</td>
+        </tr>
+
+
+    }
+
+</table>

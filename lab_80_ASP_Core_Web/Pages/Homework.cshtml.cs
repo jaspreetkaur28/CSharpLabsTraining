@@ -18,5 +18,8 @@ namespace lab_80_ASP_Core_Web.Pages
             Something2 = "hi this is flexbox 2. Words words words words words words words words words";
             Something3 = "hi this is flexbox 3. Words words words words words words words words words";
         }
+
+
+
     }
 }

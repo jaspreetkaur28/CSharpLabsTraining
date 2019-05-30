@@ -1,0 +1,36 @@
+﻿@page
+@model hw_108_ASP_Core_Web.Pages.CharactersModel
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<style>
+    div.block {
+        font-style: italic;
+        text-align: center;
+    }
+</style>
+<div class="block">
+    <h1>Characters</h1>
+</div>
+
+<hr /> <hr />
+<table class="table table-striped table-hover table-bordered">
+    <tr>
+
+
+        <th>Name</th>
+        <th>History</th>
+    </tr>
+
+
+    @foreach (var item in Model.CList)
+    {
+        <tr>
+
+            <td>@item.CharacterName</td>
+            <td>@item.History</td>
+        </tr>
+
+    }
+
+</table>

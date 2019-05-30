@@ -3,7 +3,7 @@
 @*
     For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 *@
-
+<h1>Customers Table</h1>
 <table class="table table-striped table-hover table-bordered">
     <tr>
         <th>Customer ID</th>
@@ -20,18 +20,18 @@
     </tr>
     @foreach (var item in Model.CustomerList)
     {
-<tr>
-    <td>@item.CustomerID</td>
-    <td>@item.CompanyName</td>
-    <td>@item.ContactTitle</td>
-    <td>@item.ContactName</td> 
-    <td>@item.Address</td>
-    <td>@item.City</td>
-    <td>@item.Region</td>
-    <td>@item.PostalCode</td>
-    <td>@item.Country</td>
-    <td>@item.Phone</td>
-    <td>@item.Fax</td> 
-</tr>
-    }
+        <tr>
+            <td>@item.CustomerID</td>
+            <td>@item.CompanyName</td>
+            <td>@item.ContactTitle</td>
+            <td>@item.ContactName</td>
+            <td>@item.Address</td>
+            <td>@item.City</td>
+            <td>@item.Region</td>
+            <td>@item.PostalCode</td>
+            <td>@item.Country</td>
+            <td>@item.Phone</td>
+            <td>@item.Fax</td>
+        </tr>
+    } 
 </table> 

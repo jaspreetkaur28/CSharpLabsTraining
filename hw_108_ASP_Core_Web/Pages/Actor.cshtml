@@ -1,0 +1,34 @@
+﻿@page
+@model hw_108_ASP_Core_Web.Pages.ActorsModel
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<style>
+    div.block {
+        font-style: italic;
+        text-align: center;
+    }
+</style>
+<div class="block">
+    <h1>Actors and their characters</h1>
+</div>
+<hr /> <hr />
+<table class="table table-striped table-hover table-bordered">
+    <tr>
+
+        <th>Name</th>
+        <th>Character</th>
+    </tr>
+
+
+    @foreach (var item in Model.ActorList)
+    {
+        <tr>
+            <td>@item.ActorName</td>
+            
+        </tr>
+    } 
+
+</table>
+
+ 

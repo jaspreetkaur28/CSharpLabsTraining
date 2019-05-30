@@ -215,7 +215,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_76_Console_Core", "lab_
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_77_Entity_Core", "lab_77_Entity_Core\lab_77_Entity_Core.csproj", "{415676DA-C280-47C3-8764-B40BD3550730}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hw_105_ToDoDatabase", "hw_105_ToDoDatabase\hw_105_ToDoDatabase.csproj", "{3FCB563B-677E-4364-A892-4782C31B1654}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A_Project_ToDoDatabase", "hw_105_ToDoDatabase\A_Project_ToDoDatabase.csproj", "{3FCB563B-677E-4364-A892-4782C31B1654}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_78_Tasks", "lab_78_Tasks\lab_78_Tasks.csproj", "{98547643-0326-4F62-B0C6-38418B183B99}"
 EndProject
@@ -225,7 +225,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hw_106_InterviewPrep", "Int
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hw_107_enum", "hw_lab_107_enum\hw_107_enum.csproj", "{B7C17F9B-8E95-4158-8433-172B9B5D52E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_80_ASP_Core_Web", "lab_80_ASP_Core_Web\lab_80_ASP_Core_Web.csproj", "{6524FA7D-B561-4860-864E-8BC87A8FC5ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_80_ASP_Core_Web", "lab_80_ASP_Core_Web\lab_80_ASP_Core_Web.csproj", "{6524FA7D-B561-4860-864E-8BC87A8FC5ED}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "hw_108_ASP_Core_Web", "hw_108_ASP_Core_Web\hw_108_ASP_Core_Web.csproj", "{7B56147D-868F-45E6-9225-0120AEDA4475}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_81_ASP_ToDo__", "lab_81_ASP_ToDo__\lab_81_ASP_ToDo__.csproj", "{39CED096-0B34-4506-B3BD-89BC9A05D6A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_82_Tuple", "lab_82_Tuple\lab_82_Tuple.csproj", "{FD2EC06C-7303-4702-9135-8F3213C9530B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -681,6 +687,18 @@ Global
 		{6524FA7D-B561-4860-864E-8BC87A8FC5ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6524FA7D-B561-4860-864E-8BC87A8FC5ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6524FA7D-B561-4860-864E-8BC87A8FC5ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B56147D-868F-45E6-9225-0120AEDA4475}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B56147D-868F-45E6-9225-0120AEDA4475}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B56147D-868F-45E6-9225-0120AEDA4475}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B56147D-868F-45E6-9225-0120AEDA4475}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39CED096-0B34-4506-B3BD-89BC9A05D6A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39CED096-0B34-4506-B3BD-89BC9A05D6A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39CED096-0B34-4506-B3BD-89BC9A05D6A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39CED096-0B34-4506-B3BD-89BC9A05D6A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD2EC06C-7303-4702-9135-8F3213C9530B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD2EC06C-7303-4702-9135-8F3213C9530B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD2EC06C-7303-4702-9135-8F3213C9530B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD2EC06C-7303-4702-9135-8F3213C9530B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
