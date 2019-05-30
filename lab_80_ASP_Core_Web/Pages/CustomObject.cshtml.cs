@@ -15,16 +15,16 @@ namespace lab_80_ASP_Core_Web.Pages
         {
             using (var db = new Northwind())
             {
-                customers =
-                (from c in db.Customers
-                 select new
-                 {
+                //customers =
+                //(from c in db.Customers
+                // select new
+                // {
 
-                     Name = c.ContactName,
-                     City = c.City,
-                     CompanyName //Single values item   
-                 }
-                 ).To
+                //     Name = c.ContactName,
+                //     City = c.City,
+                //     CompanyName //Single values item   
+                // }
+                // ).To
             }
         }
     }

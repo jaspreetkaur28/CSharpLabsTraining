@@ -1,0 +1,56 @@
+﻿@page
+@model lab_83_ASP_Core_Add_Records.Pages.InjecteCustomersModel
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<h1>Injected Customers</h1>
+<hr />
+<h3>Add Customers</h3>
+<hr />
+
+
+    <p>Add a new customer</p>
+    <form method="POST">
+        <div class="form-group">
+
+            <label for="customerID">ID</label>
+            <input asp-for="customer.CustomerID" type="text" class="form-control" id="customerID" placeholder="ZYX2A" />
+        </div>
+        <div class="form-group">
+            <label>Name</label>
+            <input asp-for="customer.ContactName" type="text" class="form-control" id="customerName" placeholder="Name" />
+        </div>
+        <div class="form-group">
+            <label>Company</label>
+            <input asp-for="customer.CompanyName" type="text" class="form-control" id="companyName" placeholder="Company" />
+        </div>
+        <div class="form-group">
+            <label>City</label>
+            <input asp-for="customer.City" type="text" class="form-control" id="City" placeholder="City" />
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+    </form>
+ 
+    <hr />
+
+<table class="table table-hover table-bordered table-striped">
+
+    <tr>
+        <th>Company Name</th>
+        <th>Contact Name</th>
+        <th>City</th>
+    </tr>
+    @foreach (var item in Model.customers)
+    {
+        if (item != null)
+        {
+        <tr>
+            <td>@item.CompanyName</td>
+            <td>@item.ContactName</td>
+            <td>@item.City</td>
+        </tr>
+        }
+    }
+
+
+</table> 

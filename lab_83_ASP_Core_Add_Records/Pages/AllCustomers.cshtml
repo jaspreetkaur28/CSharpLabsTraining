@@ -1,0 +1,114 @@
+﻿@page
+@model lab_83_ASP_Core_Add_Records.Pages.AllCustomersModel
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<h1> All Customers</h1>
+<hr />
+
+<style>
+    .pagination {
+        display: inline-block;
+    } .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+        }  .pagination a.active {
+                background-color: #4CAF50;
+                color: white;
+            }  .pagination a:hover:not(.active) {
+                background-color: #ddd;
+            }
+
+    .button {
+         float: left;
+        display: inline-block;
+        border: none;
+        color: white;
+        padding: 10px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;  
+    }.button b.active {
+                background-color: #4CAF50;
+                color: white;
+            }  .button b:hover:not(.active) {
+                background-color: #bfbfbf;
+            }
+
+    </style> 
+<div class="pagination">
+    <a href="#">&laquo;</a>
+    <a class="active" href="#">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">6</a>
+    <a href="#">&raquo;</a>
+</div>
+
+<form action="AllCustomers" method="get">   
+    <input type="hidden" name="page" value="@(Model.current - 1)" /> <button class="button" type="submit">&laquo;</button>
+</form>
+<form action="AllCustomers" method="get">
+    <input type="hidden" name="page" value="@(1)" />   <button class="button" type="submit">1</button>
+</form>
+<form action="AllCustomers" method="get">
+    <input type="hidden" name="page" value="@(2)" />   <button class="button" type="submit">2</button>
+</form>
+<form action="AllCustomers" method="get">
+    <input type="hidden" name="page" value="@(3)" />   <button class="button" type="submit">3</button>
+</form>
+<form action="AllCustomers" method="get">
+    <input type="hidden" name="page" value="@(4)" />   <button class="button" type="submit">4</button>
+</form>
+<form action="AllCustomers" method="get">
+    <input type="hidden" name="page" value="@(5)" />   <button class="button" type="submit">5</button>
+</form>
+<form action="AllCustomers" method="get">
+    <input type="hidden" name="page" value="@(6)" />   <button class="button" type="submit">6</button>
+</form>
+<form action="AllCustomers" method="get">
+    <input type="hidden" name="page" value="@(7)" />   <button class="button" type="submit">7</button>
+</form>
+<form action="AllCustomers" method="get">
+    <input type="hidden" name="page" value="@(8)" />   <button class="button" type="submit">8</button>
+</form>
+<form action="AllCustomers" method="get">
+    <input type="hidden" name="page" value="@(9)" />   <button class="button" type="submit">9</button>
+</form>
+<form action="AllCustomers" method="get">
+    <input type="hidden" name="page" value="@(10)" />   <button class="button" type="submit">10</button>
+</form>
+ 
+<form action="AllCustomers" method="get"> 
+    <input type="hidden" name="page" value="@(Model.current + 1)" /> <button class="button" type="submit">&raquo;</button>
+</form>
+
+
+
+
+<hr />
+<table class="table table-hover table-bordered table-striped">
+
+    <tr>
+        <th>Company Name</th>
+        <th>Contact Name</th>
+        <th>City</th>
+    </tr>
+    @foreach (var item in Model.customers)
+    {
+        <tr>
+            <td>@item.CompanyName</td>
+            <td>@item.ContactName</td>
+            <td>@item.City</td>
+        </tr>
+    }
+
+
+</table>

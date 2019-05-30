@@ -1,0 +1,25 @@
+﻿@page
+@model lab_83_ASP_Core_Add_Records.Pages.NorthwindCustomersModel
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+    <h1>Northwind Customers</h1>
+<hr/>
+<table class="table table-hover table-bordered table-striped">
+
+    <tr>
+        <th>Company Name</th>
+        <th>Contact Name</th>
+        <th>City</th>
+    </tr> 
+    @foreach (var item in Model.customers)
+    {
+        <tr>
+            <td>@item.CompanyName</td>
+            <td>@item.ContactName</td>
+            <td>@item.City</td>
+        </tr>
+    }
+     
+
+</table> 

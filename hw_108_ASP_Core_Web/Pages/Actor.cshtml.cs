@@ -24,9 +24,9 @@ namespace hw_108_ASP_Core_Web.Pages
                     on actors.CharacterID equals Char.CharacterID
            
                 select new
-                { 
-                    name = actors.ActorName,   
-                    C = Char.CharacterName
+                {
+                    ActorName = actors.ActorName,
+                    CharacterName = Char.CharacterName
                 }).ToList();
 
                 ///C2List = db.Characters.ToList(); 
