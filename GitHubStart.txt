@@ -49,3 +49,61 @@ check github
 
 
 5.git add untracked files
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## **git branch**
+
+# list all branches
+git branch
+# create
+git branch dev
+# start working in that branch
+git checkout dev
+# combine two commands in one
+git checkout -b dev
+# work in master
+git checkout master
+
+Let's push up DEV changes
+
+git checkout dev
+# make changes
+git add .
+git commit -m "some changes"
+git push
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

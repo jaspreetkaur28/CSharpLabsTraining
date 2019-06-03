@@ -2,6 +2,7 @@ using NUnit.Framework;
 using lab_42_testme;
 using lab_102_homework;
 using Homework_9_NUNIT;
+using project_b;
 
 namespace Tests
 {
@@ -17,6 +18,15 @@ namespace Tests
         {
             Assert.Pass();
         }
+
+        [TestCase(new string[] { "hi", "there" }, new string[] { "hi", "there", "you" }, new string[] { "hi", "there", "you" })]
+        public void linqunion(string[] x, string[] y, string[] expected)
+        {
+            var actual = linq.LINQunion(x, y);
+
+            Assert.AreEqual(expected, actual);
+        }
+
 
 
         [Test]

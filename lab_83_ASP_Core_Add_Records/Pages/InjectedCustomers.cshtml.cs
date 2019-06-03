@@ -10,11 +10,6 @@ namespace lab_83_ASP_Core_Add_Records.Pages
 {
     public class InjecteCustomersModel : PageModel
     {
-
-
-
-   
-
         public List<Customer> customers;
 
         private Northwind db;

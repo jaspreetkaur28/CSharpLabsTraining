@@ -8,89 +8,51 @@
 <hr />
 
 <style>
+    .center {
+        text-align: center;
+    }
+
     .pagination {
         display: inline-block;
-    } .pagination a {
+    }
+
+        .pagination a {
             color: black;
             float: left;
             padding: 8px 16px;
             text-decoration: none;
-        }  .pagination a.active {
+        }
+
+            .pagination a.active {
                 background-color: #4CAF50;
                 color: white;
-            }  .pagination a:hover:not(.active) {
+            }
+
+            .pagination a:hover:not(.active) {
                 background-color: #ddd;
             }
+</style>
 
-    .button {
-         float: left;
-        display: inline-block;
-        border: none;
-        color: white;
-        padding: 10px 10px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;  
-    }.button b.active {
-                background-color: #4CAF50;
-                color: white;
-            }  .button b:hover:not(.active) {
-                background-color: #bfbfbf;
-            }
 
-    </style> 
-<div class="pagination">
-    <a href="#">&laquo;</a>
-    <a class="active" href="#">1</a>
-    <a href="#">2</a>
-    <a href="#">3</a>
-    <a href="#">4</a>
-    <a href="#">5</a>
-    <a href="#">6</a>
-    <a href="#">&raquo;</a>
+
+<div class="center">
+    <div class="pagination">
+        <a href="?page=1">&laquo;</a>
+        <a href="?page=@(Model.current - 1)">&lt;</a>
+        <a   href="?page=1">1</a>
+        <a href="?page=2">2</a>
+        <a href="?page=3">3</a>
+        <a href="?page=4">4</a>
+        <a href="?page=5">5</a>
+        <a href="?page=6">6</a>
+        <a href="?page=7">7</a>
+        <a href="?page=8">8</a>
+        <a href="?page=9">9</a>
+        <a href="?page=10">10</a>
+        <a href="?page=@(Model.current + 1)">&gt;</a>
+        <a href="?page=@(Model.current + 100)">&raquo;</a>
+    </div>
 </div>
-
-<form action="AllCustomers" method="get">   
-    <input type="hidden" name="page" value="@(Model.current - 1)" /> <button class="button" type="submit">&laquo;</button>
-</form>
-<form action="AllCustomers" method="get">
-    <input type="hidden" name="page" value="@(1)" />   <button class="button" type="submit">1</button>
-</form>
-<form action="AllCustomers" method="get">
-    <input type="hidden" name="page" value="@(2)" />   <button class="button" type="submit">2</button>
-</form>
-<form action="AllCustomers" method="get">
-    <input type="hidden" name="page" value="@(3)" />   <button class="button" type="submit">3</button>
-</form>
-<form action="AllCustomers" method="get">
-    <input type="hidden" name="page" value="@(4)" />   <button class="button" type="submit">4</button>
-</form>
-<form action="AllCustomers" method="get">
-    <input type="hidden" name="page" value="@(5)" />   <button class="button" type="submit">5</button>
-</form>
-<form action="AllCustomers" method="get">
-    <input type="hidden" name="page" value="@(6)" />   <button class="button" type="submit">6</button>
-</form>
-<form action="AllCustomers" method="get">
-    <input type="hidden" name="page" value="@(7)" />   <button class="button" type="submit">7</button>
-</form>
-<form action="AllCustomers" method="get">
-    <input type="hidden" name="page" value="@(8)" />   <button class="button" type="submit">8</button>
-</form>
-<form action="AllCustomers" method="get">
-    <input type="hidden" name="page" value="@(9)" />   <button class="button" type="submit">9</button>
-</form>
-<form action="AllCustomers" method="get">
-    <input type="hidden" name="page" value="@(10)" />   <button class="button" type="submit">10</button>
-</form>
- 
-<form action="AllCustomers" method="get"> 
-    <input type="hidden" name="page" value="@(Model.current + 1)" /> <button class="button" type="submit">&raquo;</button>
-</form>
-
-
 
 
 <hr />
@@ -100,15 +62,21 @@
         <th>Company Name</th>
         <th>Contact Name</th>
         <th>City</th>
+        <th>Edit | Delete</th>
     </tr>
     @foreach (var item in Model.customers)
     {
-        <tr>
-            <td>@item.CompanyName</td>
-            <td>@item.ContactName</td>
-            <td>@item.City</td>
-        </tr>
-    }
+<tr>
+    <td>@item.CompanyName</td>
+    <td>@item.ContactName</td>
+    <td>  @item.City </td>
+<td>
+    <a asp-page="./EditCustomer" asp-route-id="@item.CustomerID">Edit</a> |
+    <a asp-page="./AllCustomer" onclick="return confirm('Are you sure you want to delete this item?');"
+       asp-page-handler="Delete" asp-route-id="@item.CustomerID">Delete</a>
+</td>
 
 
+</tr>
+    } 
 </table>

@@ -33,28 +33,26 @@ namespace lab_83_ASP_Core_Add_Records.Pages
                     current = 1;
                 } 
                 else  {  current = Int32.Parse(Request.Query["page"]);  }
-
-                customers = db.Customers.Skip(10 * (current - 1)).Take(10).ToList();  
+            current = Math.Max(current, 1);
+            current = Math.Min(10, current); // hard coded 10
+            customers = db.Customers.Skip(10 * (current - 1)).Take(10).ToList();
+            
         }
-         
-        public IActionResult OnPost()
+    
+
+        public IActionResult OnGetDelete(string id)
         {
-            if (ModelState.IsValid)
+            if (id != null)
             {
-                db.Customers.Add(customer);
+                var data = (from customer in db.Customers
+                            where customer.CustomerID == id
+                            select customer).SingleOrDefault();
+
+                db.Remove(data);
                 db.SaveChanges();
-                return RedirectToPage("/NorthwindCustomers");
             }
-            return Page();
+            return RedirectToPage("/AllCustomer");
         }
-
-
-
-
-
-
-
-
 
 
 
