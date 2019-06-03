@@ -6,7 +6,7 @@ using project_b;
 
 namespace Tests
 {
-    public class Tests
+    public class CollectionTest
     {
         [SetUp]
         public void Setup()
