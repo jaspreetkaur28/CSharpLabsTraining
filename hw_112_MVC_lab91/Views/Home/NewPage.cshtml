@@ -1,0 +1,18 @@
+﻿@model hw_112_MVC_lab91.Models.Customer;
+@{
+    ViewData["Title"] = "NewPage";
+}
+
+<h2>NewPage - very original </h2>
+<hr />
+@foreach (var item in ViewBag.customers)
+{
+    if (item != null)
+    {
+        <ul>
+            <li>@item.CompanyName</li>
+            <li>@item.ContactName</li>
+            <hr\>
+        </ul> 
+    }
+}

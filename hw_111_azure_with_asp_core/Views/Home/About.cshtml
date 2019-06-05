@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Azure";
+}
+
+
+
+
+<table class="table table-striped table-hover table-bordered">
+    <tr>
+        <th>MovieName</th>
+        <th>Genre</th>
+        <th>Raiting</th> 
+
+
+    </tr>
+
+
+    @foreach (var item in Model.EmpList)
+    {
+        <tr>
+            <td>@item.MovieName</td>
+            <td>@item.Genre</td>
+            <td>@item.Raiting</td> 
+        </tr>
+
+
+    }
+
+</table>

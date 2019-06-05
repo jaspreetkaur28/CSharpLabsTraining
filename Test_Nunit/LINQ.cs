@@ -12,6 +12,20 @@ namespace Tests
         }
 
 
+
+        public void hw_110_StreamReader(int[] aa, int expected)
+        {
+
+        }
+
+
+
+
+
+
+
+
+
         [TestCase(new int[] { 1, 2, 3, 4, 5, 6 }, 21)]
         [TestCase(new int[] { 2, 2, 4, 4, 6, 6 }, 24)]
         [TestCase(new int[] { 1, 1, 1, 1, 1, 1 }, 6)]

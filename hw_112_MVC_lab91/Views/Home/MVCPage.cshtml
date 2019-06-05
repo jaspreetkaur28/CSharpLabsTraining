@@ -1,0 +1,36 @@
+﻿@model hw_112_MVC_lab91.Models.ClassList;
+@{
+    ViewData["Title"] = "MVCPage";
+}
+
+<h2>MVCPage</h2>
+<hr />
+<p> List original</p>
+<hr />
+@foreach (var item in ViewBag.thislist)
+{
+    <ul>
+        <li> @item</li>
+    </ul>
+
+}
+<hr />
+<p> List 1 data</p>
+<hr />
+@foreach (var item in Model.LIST1)
+{
+    <ul>
+        <li> @item</li>
+    </ul>
+
+}
+<hr />
+<p> List 2 data</p>
+<hr />
+@foreach (var item in Model.LIST2)
+{
+    <ul>
+        <li> @item</li>
+    </ul>
+
+}
