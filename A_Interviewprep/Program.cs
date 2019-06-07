@@ -32,6 +32,7 @@ namespace A_Interviewprep
             
             Console.WriteLine(y.Replace(" ", ""));
 
+            //substrings
 
 
 

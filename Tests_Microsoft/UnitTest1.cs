@@ -42,8 +42,8 @@ namespace Tests_Microsoft
 
 
     [TestClass]
-    public class UnitTest1
-    {
+    public class TryMakeTheseGreen
+        {
         [TestMethod]
         public void Check_Spongebob()
         {

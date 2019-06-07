@@ -22,7 +22,7 @@ namespace lab_93_Entity_XML
         [StringLength(40)]
         public string ProductName { get; set; }
 
-      //  public int? CategoryID { get; set; }
+        public int? CategoryID { get; set; }
 
         [StringLength(20)]
         public string QuantityPerUnit { get; set; }
@@ -32,13 +32,13 @@ namespace lab_93_Entity_XML
 
         public short? UnitsInStock { get; set; }
 
-      //  public short? UnitsOnOrder { get; set; }
+        public short? UnitsOnOrder { get; set; }
 
         public short? ReorderLevel { get; set; }
 
-       // public bool Discontinued { get; set; }
+        public bool Discontinued { get; set; }
 
-        public virtual Category Category { get; set; }
+      //  public virtual Category Category { get; set; }
 
 
     }

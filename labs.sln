@@ -109,7 +109,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Nunit", "Test_Nunit\Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_43_Entity", "lab_43_Entity\lab_43_Entity.csproj", "{3E6BE9D8-C3BA-46B6-A83D-9C866659DD8A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GAME_WPF", "WPF_game\GAME_WPF.csproj", "{19CB91CE-AAED-470D-961C-E4873D9913EF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A_Project_GAME_WPF", "WPF_game\A_Project_GAME_WPF.csproj", "{19CB91CE-AAED-470D-961C-E4873D9913EF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_44_entity", "lab_44_entity\lab_44_entity.csproj", "{8AD81FA7-6BE2-428F-AD2F-0554DBDA35DD}"
 EndProject
@@ -233,7 +233,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_81_ASP_ToDo__", "lab_81
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_82_Tuple", "lab_82_Tuple\lab_82_Tuple.csproj", "{FD2EC06C-7303-4702-9135-8F3213C9530B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_83_ASP_Core_Add_Records", "lab_83_ASP_Core_Add_Records\lab_83_ASP_Core_Add_Records.csproj", "{83E66379-115D-4705-9F24-D797A487BD4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "A_Project_lab_83_ASP_Core_Add_Records", "lab_83_ASP_Core_Add_Records\A_Project_lab_83_ASP_Core_Add_Records.csproj", "{83E66379-115D-4705-9F24-D797A487BD4D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_82_scartchpad", "lab_82_scartchpad\lab_82_scartchpad.csproj", "{77FC4E2B-3408-4D99-AD28-1CE1F7C0434F}"
 EndProject
@@ -272,6 +272,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_93_Entity_XML", "lab_93_Entity_XML\lab_93_Entity_XML.csproj", "{5A40EF52-BE56-4E22-8D49-2C9C9A62F41E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_93_XML_B_Products", "lab_93_XML_B_Products\lab_93_XML_B_Products.csproj", "{92B47EA1-9F1E-42E5-934A-6E9AA01CC3CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_94_Selenium_01", "lab_94_Selenium_01\lab_94_Selenium_01.csproj", "{08E74784-45CF-4F07-9418-BD994491FF51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A_Project_UMSProject", "UMSProject\A_Project_UMSProject.csproj", "{20BA312C-F41A-404B-A3F2-093E78EFC07F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -819,6 +823,14 @@ Global
 		{92B47EA1-9F1E-42E5-934A-6E9AA01CC3CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92B47EA1-9F1E-42E5-934A-6E9AA01CC3CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92B47EA1-9F1E-42E5-934A-6E9AA01CC3CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08E74784-45CF-4F07-9418-BD994491FF51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08E74784-45CF-4F07-9418-BD994491FF51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08E74784-45CF-4F07-9418-BD994491FF51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08E74784-45CF-4F07-9418-BD994491FF51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20BA312C-F41A-404B-A3F2-093E78EFC07F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20BA312C-F41A-404B-A3F2-093E78EFC07F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20BA312C-F41A-404B-A3F2-093E78EFC07F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20BA312C-F41A-404B-A3F2-093E78EFC07F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
