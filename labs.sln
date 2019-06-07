@@ -259,11 +259,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "hw_111_azure_with_asp_core"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_89_API", "lab_89_API\lab_89_API.csproj", "{9126C6EE-2232-4637-8C6D-95623DFA19E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_90_MVC_CORE", "lab_90_MVC_CORE\lab_90_MVC_CORE.csproj", "{86A24285-D1FB-4D3A-8BEF-1005878D9ED2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_90_MVC_CORE", "lab_90_MVC_CORE\lab_90_MVC_CORE.csproj", "{86A24285-D1FB-4D3A-8BEF-1005878D9ED2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_91_MVC_CORE_fromScratch", "lab_91_MVC_CORE_fromScratch\lab_91_MVC_CORE_fromScratch.csproj", "{532C5DB7-309F-4257-A9C6-1A28F1763D68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_91_MVC_CORE_fromScratch", "lab_91_MVC_CORE_fromScratch\lab_91_MVC_CORE_fromScratch.csproj", "{532C5DB7-309F-4257-A9C6-1A28F1763D68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hw_112_MVC_lab91", "hw_112_MVC_lab91\hw_112_MVC_lab91.csproj", "{933217A3-7AAF-4EE2-BDE4-5C74F730858F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "hw_112_MVC_lab91", "hw_112_MVC_lab91\hw_112_MVC_lab91.csproj", "{933217A3-7AAF-4EE2-BDE4-5C74F730858F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_92_XML_hello_world", "lab_92_XML_hello_world\lab_92_XML_hello_world.csproj", "{787EBE95-78FD-4F3F-9F54-F9EFB78CA82E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A_Interviewprep", "A_Interviewprep\A_Interviewprep.csproj", "{0D5B4C91-F470-4B41-85EF-F0A8E6324816}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_93_Entity_XML", "lab_93_Entity_XML\lab_93_Entity_XML.csproj", "{5A40EF52-BE56-4E22-8D49-2C9C9A62F41E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_93_XML_B_Products", "lab_93_XML_B_Products\lab_93_XML_B_Products.csproj", "{92B47EA1-9F1E-42E5-934A-6E9AA01CC3CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -795,6 +803,22 @@ Global
 		{933217A3-7AAF-4EE2-BDE4-5C74F730858F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{933217A3-7AAF-4EE2-BDE4-5C74F730858F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{933217A3-7AAF-4EE2-BDE4-5C74F730858F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{787EBE95-78FD-4F3F-9F54-F9EFB78CA82E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{787EBE95-78FD-4F3F-9F54-F9EFB78CA82E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{787EBE95-78FD-4F3F-9F54-F9EFB78CA82E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{787EBE95-78FD-4F3F-9F54-F9EFB78CA82E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D5B4C91-F470-4B41-85EF-F0A8E6324816}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D5B4C91-F470-4B41-85EF-F0A8E6324816}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D5B4C91-F470-4B41-85EF-F0A8E6324816}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D5B4C91-F470-4B41-85EF-F0A8E6324816}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A40EF52-BE56-4E22-8D49-2C9C9A62F41E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A40EF52-BE56-4E22-8D49-2C9C9A62F41E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A40EF52-BE56-4E22-8D49-2C9C9A62F41E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A40EF52-BE56-4E22-8D49-2C9C9A62F41E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92B47EA1-9F1E-42E5-934A-6E9AA01CC3CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92B47EA1-9F1E-42E5-934A-6E9AA01CC3CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92B47EA1-9F1E-42E5-934A-6E9AA01CC3CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92B47EA1-9F1E-42E5-934A-6E9AA01CC3CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

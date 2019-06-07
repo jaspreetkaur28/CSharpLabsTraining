@@ -11,10 +11,7 @@ namespace hw_112_MVC_lab91.Controllers
     public class HomeController : Controller
     {
         List<string> thislist = new List<string>();
-
-
         public List<Customer> customers = new List<Customer>();
-
 
         private Northwind db;
         public HomeController(Northwind InjectedContext)
@@ -25,36 +22,29 @@ namespace hw_112_MVC_lab91.Controllers
         public Customer Customer { get; set; }
         public IActionResult NewPage()
         {
-
             customers = db.Customers.ToList();
             ViewBag.customers = customers;
             return View();
-
         }
-
-
         public IActionResult Index()
         {
-
-            //thislist.Add("one data is okay");
-            //ViewBag.thislist = thislist;
-            //var instance = new ClassList();
-            //instance.LIST1.Add("this");
-            //instance.LIST1.Add("that");
-            //instance.LIST1.Add("what");
-            //instance.LIST1.Add("no");
-
-
-            //instance.LIST2.Add("this");
-            //instance.LIST2.Add("that");
-            //instance.LIST2.Add("what");
-            //instance.LIST2.Add("no"); 
+            thislist.Add("one data is okay");
+            ViewBag.thislist = thislist;
+            var instance = new ClassList();
+            instance.LIST1.Add("this");
+            instance.LIST1.Add("that");
+            instance.LIST1.Add("what");
+            instance.LIST1.Add("no");
 
 
-            //var instance2 = new Customer();
-            ////return View("NewPage",instance2);
-            //return View("NewPage",instance2);
-            return View();
+            instance.LIST2.Add("this");
+            instance.LIST2.Add("that");
+            instance.LIST2.Add("what");
+            instance.LIST2.Add("no");
+
+
+            var instance2 = new Customer();
+            return View("NewPage", instance2);
         }
 
 

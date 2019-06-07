@@ -4,15 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Code_Wars
+namespace lab_93_XML_B_Products
 {
     class Program
     {
         static void Main(string[] args)
         {
-
-
         }
-
     }
 }
