@@ -1,7 +1,7 @@
 Use Northwind; 
 drop database IF EXISTS ToDo
 go
-create datebase ToDo
+create database ToDo
 use ToDo
 go
 CREATE TABLE Categories(CategoryID INT NOT NULL IDENTITY PRIMARY KEY, CategoryName NVARCHAR(50) NOT NULL); 
