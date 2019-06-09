@@ -1,6 +1,6 @@
 ﻿@page
-@model A_Project_UMSProject.Pages.UsersModel
- 
+@model A_ProjectUMS.Pages.UsersModel
+
 
 <h1>Users</h1>
 <hr />
@@ -13,7 +13,7 @@
     {
         <tr>
             <td>
-                <a asp-page="./EditRole" asp-route-id="@item.UserID">@(item.FirstName + " " + item.LastName)</a>
+                <a asp-page="./EditUsers" asp-route-id="@item.UsersID">@(item.FirstName + " " + item.LastName)</a>
             </td>
         </tr>
     }

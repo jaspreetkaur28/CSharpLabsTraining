@@ -1,0 +1,36 @@
+﻿@page
+@model A_ProjectUMS.Pages.CohortModel
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+    <h1>Cohort</h1>
+<hr />
+
+<table class="table table-striped table-hover table-bordered">
+    <tr>
+        <th>Cohort</th>
+        <th>Edit | Delete</th>
+    </tr>
+    @foreach (var item in Model.CohortList)
+    {
+        <tr>
+            <td>@item.CohortName</td>
+            <td>
+                <a asp-page="./EditRole" asp-route-id="@item.CohortID">Edit</a> |
+                <a asp-page="./AllCustomer" onclick="return confirm('Are you sure you want to delete this item?');"
+                   asp-page-handler="Delete" asp-route-id="@item.CohortID">Delete</a>
+            </td>
+
+        </tr>
+    }
+
+</table>
+
+<form method="POST">
+ 
+    <div class="form-group">
+        <label>Name</label>
+        <input asp-for="NewCohort.CohortName" type="text" class="form-control" id="CohortName" placeholder="Cohort Name" />
+    </div> 
+    <button type="submit" class="btn btn-primary btn-lg">Add a new Cohort</button>
+</form>

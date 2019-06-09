@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - UMSProject</title>
+    <title>@ViewData["Title"] - A_ProjectUMS</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -26,13 +26,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-page="/Index" class="navbar-brand">UMSProject</a>
+                <a asp-page="/Index" class="navbar-brand">A_ProjectUMS</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a asp-page="/Index">Home</a></li>
+                    <li><a asp-page="/About">About</a></li>
+                    <li><a asp-page="/Contact">Contact</a></li>
                     <li><a asp-page="/Users">Users</a></li>
-                    <li><a asp-page="/Role">Role</a></li>
+                    <li><a asp-page="/Role">Roles</a></li>
                     <li><a asp-page="/Cohort">Cohort</a></li>
                     <li><a asp-page="/Specialisation">Specialisation</a></li>
                 </ul>
@@ -46,7 +48,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2019 - UMSProject</p>
+            <p>&copy; 2019 - A_ProjectUMS</p>
         </footer>
     </div>
 

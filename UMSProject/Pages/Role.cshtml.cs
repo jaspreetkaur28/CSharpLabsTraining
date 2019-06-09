@@ -8,14 +8,14 @@ using A_Project_UMSProject.Models;
 
 namespace A_Project_UMSProject.Pages
 {
-    public class UsersModel : PageModel
+    public class RoleModel : PageModel
     {
-        public List<Users> UsersList = new List<Users>(); 
+        public List<Role> RoleList = new List<Role>(); 
         public void OnGet()
         {
             using (var db = new SpartaDB())
             {
-                UsersList = db.Users.ToList();
+                RoleList = db.Role.ToList();
             }
         }
     }
