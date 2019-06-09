@@ -15,6 +15,7 @@ namespace lab_80_ASP_Core_Web.Pages
         {
             using (var db = new Northwind())
             {
+
                 EmpList = db.Employees.ToList();
             }
         }
