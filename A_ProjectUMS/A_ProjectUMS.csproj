@@ -10,7 +10,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Update="Pages\EditRole.cshtml">
+    <Content Update="Pages\EditSpecialisation.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Pages\Role\EditRole.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
     <Content Update="Pages\EditUsers.cshtml">
@@ -19,7 +22,10 @@
     <Content Update="Pages\Cohort.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
-    <Content Update="Pages\Role.cshtml">
+    <Content Update="Pages\Specialisation.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Pages\Role\Role.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
     <Content Update="Pages\Users.cshtml">
@@ -28,6 +34,10 @@
     <Content Update="Pages\ViewUsers.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Pages\Specialisation\" />
   </ItemGroup>
 
 </Project>

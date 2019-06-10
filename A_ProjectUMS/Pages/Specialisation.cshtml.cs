@@ -4,19 +4,19 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using A_ProjectUMS.Models;
+using A_ProjectUMS.Models; 
 
 namespace A_ProjectUMS.Pages
 {
-    public class CohortModel : PageModel
+    public class SpecialisationModel : PageModel
     {
-        public List<Cohort> CohortList = new List<Cohort>();
-        public Cohort NewCohort { get; set; }
+        public List<Specialisation> SpecialisationList = new List<Specialisation>();
+        public Specialisation NewSpecialisation { get; set; }
         public void OnGet()
         {
             using (var db = new SpartaDB())
             {
-                CohortList = db.Cohort.ToList();
+                SpecialisationList = db.Specialisation.ToList();
             }
         }
         public IActionResult OnPost()
@@ -25,9 +25,9 @@ namespace A_ProjectUMS.Pages
             {
                 if (ModelState.IsValid)
                 {
-                    db.Cohort.Add(NewCohort);
+                    db.Specialisation.Add(NewSpecialisation);
                     db.SaveChanges();
-                    return RedirectToPage("/Cohort");
+                    return RedirectToPage("/Specialisation");
                 }
             }
             return Page();

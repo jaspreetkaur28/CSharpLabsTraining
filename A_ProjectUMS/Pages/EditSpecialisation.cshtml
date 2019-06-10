@@ -1,0 +1,14 @@
+﻿@page
+@model A_ProjectUMS.Pages.EditSpecialisationModel
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+    <h1>Edit Specialisation Details</h1>
+<hr /> 
+<form method="POST"> 
+    <div class="form-group">
+    <label>Name</label>
+    <input asp-for="SpecialisationSelected.SpecialisationName" type="text" class="form-control" id="Name" placeholder="Name" />
+    </div>  
+    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+</form> 

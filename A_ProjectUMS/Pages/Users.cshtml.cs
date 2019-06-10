@@ -10,7 +10,10 @@ namespace A_ProjectUMS.Pages
 {
     public class UsersModel : PageModel
     {
-        public List<Users> UsersList = new List<Users>(); 
+        public List<Users> UsersList = new List<Users>();
+
+        public Users NewUsers  { get; set; }
+
         public void OnGet()
         {
             using (var db = new SpartaDB())
@@ -18,5 +21,19 @@ namespace A_ProjectUMS.Pages
                 UsersList = db.Users.ToList();
             }
         }
+        public IActionResult OnPost()
+        {
+            using (var db = new SpartaDB())
+            {
+                if (ModelState.IsValid)
+                {
+                    db.Users.Add(NewUsers);
+                    db.SaveChanges();
+                    return RedirectToPage("/Users");
+                }
+            }
+            return Page();
+        }
+
     }
 }

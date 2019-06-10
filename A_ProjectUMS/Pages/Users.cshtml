@@ -18,4 +18,34 @@
         </tr>
     }
 
-</table>
+</table> 
+<hr />
+
+<h1>Add a new User</h1>
+<hr />
+
+<form method="POST">
+
+
+    <div class="form-group">
+        <input asp-for="NewUsers.FirstName" type="text" class="form-control" id="FirstName" placeholder="FirstName" />
+    </div>
+
+    <div class="form-group">
+        <input asp-for="NewUsers.LastName" type="text" class="form-control" id="LastName" placeholder="LastName" />
+    </div>
+
+    <div class="form-group">
+        <input asp-for="NewUsers.Password" type="text" class="form-control" id="Password" placeholder="Password" />
+    </div>
+
+    <div class="form-group">
+        <input asp-for="NewUsers.CohortID" type="text" class="form-control" id="CohortID" placeholder="CohortID" />
+    </div>
+
+    <div class="form-group">
+        <input asp-for="NewUsers.RoleID" type="text" class="form-control" id="RoleID" placeholder="RoleID" />
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+</form>

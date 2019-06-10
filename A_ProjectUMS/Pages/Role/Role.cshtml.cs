@@ -27,7 +27,7 @@ namespace A_ProjectUMS.Pages
                 {
                     db.Role.Add(NewRole);
                     db.SaveChanges();
-                    return RedirectToPage("/NorthwindCustomers");
+                    return RedirectToPage("/Role");
                 }
             }
             return Page();
