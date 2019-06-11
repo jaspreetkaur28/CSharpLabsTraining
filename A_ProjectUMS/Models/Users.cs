@@ -24,6 +24,8 @@ namespace A_ProjectUMS.Models
 
         [RegularExpression(@"^([\w\.\-]+)@([\w\-]+)((\.(\com))+)$")]
 
+
+        
         public string Email { get; set; } 
         public string Password { get; set; }
         public int CohortID { get; set; }
