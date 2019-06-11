@@ -8,7 +8,7 @@ using A_ProjectUMS.Models;
 
 namespace A_ProjectUMS.Pages
 {
-    public class CohortModel : PageModel
+    public class CohortsModel : PageModel
     {
         public List<Cohort> CohortList = new List<Cohort>();
         public Cohort NewCohort { get; set; }
@@ -31,6 +31,24 @@ namespace A_ProjectUMS.Pages
                 }
             }
             return Page();
+        }
+        public IActionResult OnGetDelete(int id)
+        {
+
+            if (id != null)
+            {
+                using (var db = new SpartaDB())
+                {
+                    var data = (from o in db.Users
+                                where o.UsersID == id
+                                select o).SingleOrDefault();
+
+                    db.Remove(data);
+                    db.SaveChanges();
+                }
+
+            }
+            return RedirectToPage("./Cohort");
         }
 
     }

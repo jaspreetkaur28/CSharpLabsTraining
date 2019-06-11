@@ -8,26 +8,28 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace A_ProjectUMS.Pages
 {
-    public class EditSpecialisationModel : PageModel
+    
+    public class EditCohortModel : PageModel
     {
-        public List<Specialisation> SpecialisationList;
+        public List<Role> RoleList;
 
         private SpartaDB db;
-        public EditSpecialisationModel(SpartaDB InjectedContext)
+        public EditCohortModel(SpartaDB InjectedContext)
         {
             db = InjectedContext;
         }
          [BindProperty]
-        public Specialisation SpecialisationSelected { get; set; }
+        public Cohort CohortSelected { get; set; }
         public void OnGet(int id)
         {
             //using (var db = new SpartaDB())
             //{
-                var data = (from o in db.Specialisation
-                            where o.SpecialisationID == id
+                var data = (from o in db.Cohort
+                            where o.CohortID == id
                             select o).SingleOrDefault();
-            SpecialisationSelected = data; 
+                CohortSelected = data; 
             //}
+
         }
 
         public IActionResult OnPost()
@@ -38,10 +40,11 @@ namespace A_ProjectUMS.Pages
                 {
                     return Page();
                 }
-                db.Entry(SpecialisationSelected).Property(x => x.SpecialisationName).IsModified = true;  
+                db.Entry(CohortSelected).Property(x => x.CohortName).IsModified = true;  
+                db.Entry(CohortSelected).Property(x => x.SpecialisationID).IsModified = true;  
                 db.SaveChanges();
            // }
-            return RedirectToPage("./Specialisation");
+            return RedirectToPage("ViewCohort");
         }
 
     }

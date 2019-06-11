@@ -39,7 +39,7 @@
     <div class="pagination">
         <a href="?page=1">&laquo;</a>
         <a href="?page=@(Model.current - 1)">&lt;</a>
-        <a   href="?page=1">1</a>
+        <a href="?page=1">1</a>
         <a href="?page=2">2</a>
         <a href="?page=3">3</a>
         <a href="?page=4">4</a>
@@ -66,17 +66,17 @@
     </tr>
     @foreach (var item in Model.customers)
     {
-<tr>
-    <td>@item.CompanyName</td>
-    <td>@item.ContactName</td>
-    <td>  @item.City </td>
-<td>
-    <a asp-page="./EditCustomer" asp-route-id="@item.CustomerID">Edit</a> |
-    <a asp-page="./AllCustomer" onclick="return confirm('Are you sure you want to delete this item?');"
-       asp-page-handler="Delete" asp-route-id="@item.CustomerID">Delete</a>
-</td>
+        <tr>
+            <td>@item.CompanyName</td>
+            <td>@item.ContactName</td>
+            <td>  @item.City </td>
+            <td>
+                <a asp-page="./EditCustomer" asp-route-id="@item.CustomerID">Edit</a> |
+                <a asp-page="./AllCustomer" onclick="return confirm('Are you sure you want to delete this item?');"
+                   asp-page-handler="Delete" asp-route-id="@item.CustomerID">Delete</a>
+            </td>
 
 
-</tr>
-    } 
+        </tr>
+    }
 </table>

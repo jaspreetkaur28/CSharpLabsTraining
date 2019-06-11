@@ -7,29 +7,27 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace A_ProjectUMS.Pages
-{
-    public class ViewUsersModel : PageModel
+{ 
+    public class ViewCohortModel : PageModel
     {
       //  public List<Users> UsersList;
 
         private SpartaDB db;
-        public ViewUsersModel(SpartaDB InjectedContext)
+        public ViewCohortModel(SpartaDB InjectedContext)
         {
             db = InjectedContext;
         }
 
         [BindProperty]
-        public Users UserSelected { get; set; }
+        public Cohort CohortSelected { get; set; }
         public void OnGet(int id)
-        {
-            //using (var db = new SpartaDB())
+        {   //using (var db = new SpartaDB())
             //{
-                var data = (from user in db.Users
-                            where user.UsersID == id
-                            select user).SingleOrDefault();
-                UserSelected = data;
-          //  }
-
+                var data = (from o in db.Cohort
+                            where o.CohortID == id
+                            select o).SingleOrDefault();
+            CohortSelected = data;
+          //  } 
         }
 
 

@@ -5,6 +5,30 @@
 *@
 <h1>User Details</h1>
 <hr />
+<a asp-page="./Users">Back to User Page</a>
+<div>
+    <dl class="dl-horizontal">
+        <dt>User ID</dt> 
+        <dt>First Name</dt>
+        <dt>Last Name</dt>
+        <dt>Email</dt>
+        <dt>Password</dt>
+        <dt>CohortID</dt>
+        <dt>RoleID</dt>
+   
+        <dd>
+            <b>    @Html.DisplayFor(model => model.UserSelected) </b>
+        </dd>  
+         
+    </dl>
+</div>
+
+<a asp-page="./EditUsers" asp-route-id="UsersID">Edit this User's details</a>
+
+<!--
+
+
+
 <input asp-for="UserSelected.FirstName" type="text" />
 <input asp-for="UserSelected.LastName" type="text" />
 <input asp-for="UserSelected.Email" type="text" />
@@ -12,10 +36,10 @@
 <input asp-for="UserSelected.CohortID" type="text" />
 <input asp-for="UserSelected.RoleID" type="text" />
 <hr />
-   <td>
-        <a asp-page="./EditUsers" asp-route-id="UserSelected.UsersID">Edit</a>
-    </td>
- 
+<td>
+    <a asp-page="./EditUsers" asp-route-id="UserSelected.UsersID">Edit</a>
+</td>
+
 <hr />
 
 
@@ -36,3 +60,7 @@
 </table>
 <button type="submit" class="btn btn-primary btn-lg">Submit</button>
 
+
+
+
+-->

@@ -10,15 +10,16 @@ namespace A_ProjectUMS.Pages
 {
     public class EditUsersModel : PageModel
     {
-        public List<Users> UsersList;
+       public List<Users> UsersList;
 
         private SpartaDB db;
         public EditUsersModel(SpartaDB InjectedContext)
         {
             db = InjectedContext;
         }
-         [BindProperty]
-        public Users UserSelected { get; set; }
+
+        [BindProperty]
+        public Users UserSelected2 { get; set; }
         public void OnGet(int id)
         {
             //using (var db = new SpartaDB())
@@ -26,7 +27,7 @@ namespace A_ProjectUMS.Pages
                 var data = (from user in db.Users
                             where user.UsersID == id
                             select user).SingleOrDefault();
-                UserSelected = data; 
+                UserSelected2 = data; 
             //}
 
         }
@@ -39,12 +40,13 @@ namespace A_ProjectUMS.Pages
                 {
                     return Page();
                 }
-                db.Entry(UserSelected).Property(x => x.FirstName).IsModified = true; 
-                db.Entry(UserSelected).Property(x => x.LastName).IsModified = true;
-                db.Entry(UserSelected).Property(x => x.Email).IsModified = true;
-                db.Entry(UserSelected).Property(x => x.Password).IsModified = true;
-                db.Entry(UserSelected).Property(x => x.CohortID).IsModified = true;
-                db.Entry(UserSelected).Property(x => x.RoleID).IsModified = true;
+                
+                db.Entry(UserSelected2).Property(x => x.FirstName).IsModified = true; 
+                db.Entry(UserSelected2).Property(x => x.LastName).IsModified = true;
+                db.Entry(UserSelected2).Property(x => x.Email).IsModified = true;
+                db.Entry(UserSelected2).Property(x => x.Password).IsModified = true;
+                db.Entry(UserSelected2).Property(x => x.CohortID).IsModified = true;
+                db.Entry(UserSelected2).Property(x => x.RoleID).IsModified = true;
                 db.SaveChanges();
            // }
             return RedirectToPage("ViewUsers");

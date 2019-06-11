@@ -1,40 +1,49 @@
 Use Northwind; 
 drop database IF EXISTS SpartaDB
 go
+
 create database SpartaDB
+go
+
 use SpartaDB
 go
-CREATE TABLE Role(RoleID INT NOT NULL IDENTITY PRIMARY KEY, RoleName NVARCHAR(50) NOT NULL); 
 
+CREATE TABLE Role(
+	RoleID INT NOT NULL IDENTITY PRIMARY KEY, 
+	RoleName NVARCHAR(50) NOT NULL
+);  
 
-
-CREATE TABLE Specialisation(SpecialisationID INT NOT NULL IDENTITY PRIMARY KEY, SpecialisationName NVARCHAR(50) NOT NULL);
-
-
-
-CREATE TABLE Cohort(CohortID INT NOT NULL IDENTITY PRIMARY KEY, CohortName NVARCHAR(50) NOT NULL, SpecialisationID INT NULL FOREIGN KEY REFERENCES Specialisation(SpecialisationID)); 
-
-
-
-CREATE TABLE Users (UsersID INT NOT NULL IDENTITY PRIMARY KEY, 
-
-FirstName NVARCHAR(50) NOT NULL, LastName NVARCHAR(50) NOT NULL, Email NVARCHAR(50) NOT NULL, Password NVARCHAR(50) NOT NULL, 
-
-CohortID INT NULL FOREIGN KEY REFERENCES Cohort(CohortID), RoleID INT NULL FOREIGN KEY REFERENCES Role(RoleID));
-
-
-
+CREATE TABLE Specialisation(
+	SpecialisationID INT NOT NULL IDENTITY PRIMARY KEY, 
+	SpecialisationName NVARCHAR(50) NOT NULL
+);
+ 
+CREATE TABLE Cohort(
+	CohortID INT NOT NULL IDENTITY PRIMARY KEY, 
+	CohortName NVARCHAR(50) NOT NULL, 
+	SpecialisationID INT NULL FOREIGN KEY REFERENCES Specialisation(SpecialisationID)
+);  
+CREATE TABLE Users (
+	UsersID INT NOT NULL IDENTITY PRIMARY KEY, 
+	FirstName NVARCHAR(50) NOT NULL, 
+	LastName NVARCHAR(50) NOT NULL, 
+	Email NVARCHAR(50) NOT NULL, 
+	Password NVARCHAR(MAX) NOT NULL, 
+	CohortID INT NULL FOREIGN KEY REFERENCES Cohort(CohortID), 
+	RoleID INT NULL FOREIGN KEY REFERENCES Role(RoleID)
+);
+ 
 
 SET IDENTITY_INSERT Role ON
 INSERT INTO Role (RoleID , RoleName) VALUES (1, 'Admin'),(2, 'Trainer'),(3, 'Trainee') 
 SET IDENTITY_INSERT Role OFF
 
 SET IDENTITY_INSERT Specialisation ON
-INSERT INTO Specialisation(SpecialisationID , SpecialisationName) VALUES (1, 'A'),(2, 'B'),(3, 'C') 
+INSERT INTO Specialisation(SpecialisationID , SpecialisationName) VALUES (1, 'C#'),(2, 'Java'),(3, 'Ruby') 
 SET IDENTITY_INSERT Specialisation OFF
 
 SET IDENTITY_INSERT Cohort ON
-INSERT INTO Cohort(CohortName, SpecialisationID  ) VALUES ('A',1),( 'B',3),( 'C',2) 
+INSERT INTO Cohort(CohortName, SpecialisationID  ) VALUES (1,'Engineering-31',1),(2, 'Engineering-32',3),(3, 'Data-2',2) 
 SET IDENTITY_INSERT Cohort OFF
 
 

@@ -1,5 +1,5 @@
 ﻿@page
-@model A_ProjectUMS.Pages.CohortModel
+@model A_ProjectUMS.Pages.CohortsModel
 @*
     For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 *@
@@ -14,10 +14,10 @@
     @foreach (var item in Model.CohortList)
     {
         <tr>
-            <td>@item.CohortName</td>
+            <td> <a asp-page="./ViewCohort" asp-route-id="@item.CohortID">@item.CohortName</a></td>
             <td>
-                <a asp-page="./EditRole" asp-route-id="@item.CohortID">Edit</a> |
-                <a asp-page="./AllCustomer" onclick="return confirm('Are you sure you want to delete this item?');"
+                <a asp-page="./EditChort" asp-route-id="@item.CohortID">Edit</a> |
+                <a asp-page="./Cohort" onclick="return confirm('Are you sure you want to delete this item?');"
                    asp-page-handler="Delete" asp-route-id="@item.CohortID">Delete</a>
             </td>
 

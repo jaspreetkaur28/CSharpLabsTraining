@@ -1,0 +1,31 @@
+﻿@page
+@model A_ProjectUMS.Pages.ViewCohortModel
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<h1>User Details</h1>
+<hr />
+
+
+<a asp-page="./Cohort">Back to Cohort Page</a>
+
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>CohortID</dt>
+        <dt>CohortName</dt>
+        <dt>RoleID</dt>
+        <dt>  @Html.DisplayNameFor(model => model.CohortSelected) </dt>
+
+        <dd>
+            <b>    @Html.DisplayFor(model => model.CohortSelected) </b>
+        </dd>
+
+    </dl>
+</div>
+
+
+ 
+
+
+<a asp-page="./EditCohort" asp-route-id="CohortID">Edit Cohort</a>
